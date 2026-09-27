@@ -259,3 +259,20 @@ draft release state. No license is selected for this checkout.
 | `leanchecker` (2026-09-09) | 38 / 38 modules replayed through the kernel, 0 failures (Lean 4.33.1, arm64) |
 | direct enumeration (corroboration) | 26,574,282,886 schedules, maximum 48 (`experiments/enumeration/enumerate_cycle_schedules.c`; rebuild with `cc -O2 -o gen_enum_c experiments/enumeration/enumerate_cycle_schedules.c`; shard logs in `results/f6/enumeration/maximal-node-logs.tar.gz`, `results/f6/enumeration/all-node-logs.tar.gz`) |
 | repository layout | The 2026-09-09 cleanup uses `lean/SmpMax/Five/` and `lean/SmpMax/Six/`, reusable `tools/`, `experiments/`, `results/`, and `papers/`. See the [migration map](path-migration.md) and [validation](layout-verification.md). Historical transcripts retain original paths. |
+
+## General upper bound: fewer than 3.178^n stable matchings
+
+The complete Lean theorem `SmpMax.General.stableCount_lt_3178_pow` proves
+`stableCount(I) < (1589/500)^n` for every positive n and every strict,
+complete balanced profile. The definitions count all stable bijections.
+There is no UNSAT, numerical-certificate, or rotation-size hypothesis.
+
+The [proof guide](general-upper-bound.md) links the formal statement and
+the seven-page LaTeX note. The completed general development contains
+56 modules and 112 audited statements; 45 local modules support the final
+theorem. The standalone package retains its 24 September source build,
+all 112 audits, all 45 kernel replays, and pinned dependency revisions.
+The [26 September review record](../results/entropy-pr-ready-2026-09-26/README.md)
+checks the selected contribution and the corrected PDF rebuild workflow.
+The final theorem uses only `propext`, `Classical.choice`, and `Quot.sound`.
+This record makes no optimality or priority claim.

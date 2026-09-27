@@ -526,6 +526,83 @@
       "source_commit": "5e8cb3c",
       "sha256": "6454b9c4aa76bd8cf25667be5b3c76d57f5c24e0c1c2e177d84a3f0b4e663a8d",
       "bytes": 1586
+    },
+    {
+      "path": "output/pdf/stable-matchings-3.178-proof-latex.pdf",
+      "sha256": "1565e31e61c8cdae95a9e055428df0ff32a9881722abbc6ff23ad9dfb751823a",
+      "bytes": 83649,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "output/packages/smp-max-3.178-lean-review-2026-09-26.zip",
+      "sha256": "dedd6919281c34d87f4cafa85ac6b62ca0a4f274aa5838fbda0a153e6beb4f5e",
+      "bytes": 286543,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "output/packages/smp-max-3.178-lean-review-2026-09-26.zip.sha256",
+      "sha256": "00c99572cef33fbad0256123d8938603b8ee4f6bb9189f52d871aa3d6234c07b",
+      "bytes": 107,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-joint-saving-2026-09-23/source-snapshots.json",
+      "sha256": "ef713c33772e0222e7d3eb1b2d9b2265ff2d9de979be8e24c53cd378aa3ebedf",
+      "bytes": 1041536,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/README.md",
+      "sha256": "dedfd5bc2838b048a86fe4aa21cf19f1f820c9130bb448192d5e4e508528c6d0",
+      "bytes": 1687,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/kernel-final.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/lean-check.txt",
+      "sha256": "49ec640cdd652b4fe1d51e1c2e455864719e7736acaf46e6627649e448e5e60f",
+      "bytes": 92292,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/preservation.json",
+      "sha256": "4062788d63ec30e5e2705b549f8cdb534fa58ea09650318ed893f9fcff9a60cf",
+      "bytes": 697,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/rebuild-validation.json",
+      "sha256": "afbc622088d68a9e4c4ce8665f08a043432e04c0afdf5c253d8242d68b40f17b",
+      "bytes": 804,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/theorem.txt",
+      "sha256": "512e1cca37806060f6473d668225ff45328017d197fd4a185b2dd3c2c5a47c85",
+      "bytes": 1398,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
+    },
+    {
+      "path": "results/entropy-pr-ready-2026-09-26/validation.json",
+      "sha256": "d5b7c345ef2f0cafa5ffd26dfc57f7955cfe7b34c5bb4635ce1bc26d83a8f38d",
+      "bytes": 1666,
+      "source_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+      "scope": "Completed 3.178 formal proof and the corrected standalone review package; original proof bytes preserved."
     }
   ]
 }

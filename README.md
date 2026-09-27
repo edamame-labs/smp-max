@@ -7,6 +7,7 @@ SAT certificates, and independently checked computations.
 
 | Order | Result | Evidence and current limitation |
 |---|---|---|
+| Every n ≥ 1 | **f(n) < 3.178^n** | Complete Lean proof for all strict complete balanced profiles; no external certificate hypothesis. |
 | 5 | **f(5) = 16** | Lean theorem with an explicit UNSAT hypothesis, discharged externally by 120 cake_lpr-checked certificates; kernel-checked lower-bound witness. |
 | 6 | **f(6) = 48** | Complete Lean theorem `f6_eq_48_of_unsat`, conditional on checked UNSAT certificates for 318,736 leaf cubes; kernel-checked witness of 48. |
 | 7 | **f(7) ≥ 85** | Two explicit witnesses checked by independent matching counts and rotation-poset downsets. The upper bound is open. |
@@ -14,6 +15,12 @@ SAT certificates, and independently checked computations.
 The [evidence ledger](docs/results.md) states exactly what each layer
 establishes. An audit of recorded checker verdicts is different from
 independently checking regenerated certificates.
+
+The [general upper bound](docs/general-upper-bound.md) is the theorem
+`SmpMax.General.stableCount_lt_3178_pow`. Its English proof note and
+standalone review package include the exact constants, pinned dependencies,
+statement checks, and retained kernel-replay evidence. Independent review
+and priority assessment remain open.
 
 ## Start here
 
@@ -54,7 +61,7 @@ regeneration and the completed campaign's journal audit.
 | Directory | Purpose |
 |---|---|
 | [docs/](docs/README.md) | Current explanations, recipes, reference material, and dated history |
-| [lean/](lean/README.md) | One Lean project containing the order-5 and order-6 developments |
+| [lean/](lean/README.md) | One Lean project containing the general upper bound and the order-5/order-6 developments |
 | [tools/](tools/README.md) | Reusable counters, encodings, verification, and campaign tools |
 | [experiments/](experiments/README.md) | Enumeration, alternative SAT runs, and lower-bound searches |
 | [results/](results/README.md) | Saved witnesses and immutable evidence, with checksums |

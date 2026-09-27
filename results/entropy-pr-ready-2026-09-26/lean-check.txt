@@ -1,0 +1,1534 @@
+⚠ [531/723] Replayed SmpMax.Five.Definitions
+warning: SmpMax/Five/Definitions.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [532/723] Replayed SmpMax.Five.Symmetry
+warning: SmpMax/Five/Symmetry.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Five/Symmetry.lean:196:35: This simp argument is unused:
+  decide_eq_true_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [WF, Bool.and_eq_true, List.all_eq_true, relabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SmpMax/Five/Symmetry.lean:336:35: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Five/Symmetry.lean:381:4: This simp argument is unused:
+  Bool.and_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isStable, List.all_eq_true, List.mem_range, Bool.or_eq_true, Bool.not_eq_true',
+    Bool.and_eq_false_iff, decide_eq_true_eq, decide_eq_false_iff_not]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [533/723] Replayed SmpMax.Five.Encoding
+warning: SmpMax/Five/Encoding.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [817/1438] Replayed SmpMax.Five.EncodingFaithfulness
+warning: SmpMax/Five/EncodingFaithfulness.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Five/EncodingFaithfulness.lean:373:8: This simp argument is unused:
+  Bool.and_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [isStable, List.all_eq_true, List.mem_range, Bool.or_eq_true, Bool.not_eq_true',
+    Bool.and_eq_false_iff, decide_eq_true_eq, decide_eq_false_iff_not] at hstab'
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SmpMax/Five/EncodingFaithfulness.lean:391:35: This simp argument is unused:
+  List.getD_eq_getElem _ _ h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [List.getElem_map, List.getElem_range, List.getElem?_eq_getElem h2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [818/1438] Replayed SmpMax.Five.UpperBound
+warning: SmpMax/Five/UpperBound.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Five/UpperBound.lean:40:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [819/1438] Replayed SmpMax.Five.ExactMaximum
+warning: SmpMax/Five/ExactMaximum.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [820/1438] Replayed SmpMax.Six.ReadOff
+warning: SmpMax/Six/ReadOff.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ReadOff.lean:313:51: `List.Sublist.cons₂` has been deprecated: Use `List.Sublist.cons_cons` instead
+⚠ [821/1438] Replayed SmpMax.Six.Lattice
+warning: SmpMax/Six/Lattice.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/Lattice.lean:422:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [829/1438] Replayed SmpMax.Six.Chains
+warning: SmpMax/Six/Chains.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/Chains.lean:68:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: SmpMax/Six/Chains.lean:234:4: `List.Chain'` has been deprecated: Use `List.IsChain` instead
+warning: SmpMax/Six/Chains.lean:335:29: `List.Chain'` has been deprecated: Use `List.IsChain` instead
+warning: SmpMax/Six/Chains.lean:510:13: `List.Chain'` has been deprecated: Use `List.IsChain` instead
+warning: SmpMax/Six/Chains.lean:514:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SmpMax/Six/Chains.lean:550:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SmpMax/Six/Chains.lean:559:10: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Six/Chains.lean:559:12: Variable name `b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Six/Chains.lean:667:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Chains.lean:748:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SmpMax/Six/Chains.lean:758:10: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Six/Chains.lean:758:12: Variable name `b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [830/1438] Replayed SmpMax.Six.Relabeling
+warning: SmpMax/Six/Relabeling.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/Relabeling.lean:18:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:24:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:63:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:110:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:118:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:206:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:318:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/Relabeling.lean:363:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [831/1438] Replayed SmpMax.Six.Schedule
+warning: SmpMax/Six/Schedule.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/Schedule.lean:63:5: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [832/1438] Replayed SmpMax.Six.OrderPreservingBridge
+warning: SmpMax/Six/OrderPreservingBridge.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [866/1438] Replayed SmpMax.Six.CycleDecomposition
+warning: SmpMax/Six/CycleDecomposition.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/CycleDecomposition.lean:111:4: Try this: intro t ht1 ht2 hc
+warning: SmpMax/Six/CycleDecomposition.lean:122:0: automatically included section variable(s) unused in theorem `orbit_getD`:
+  hpμ
+  hpν
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hpμ hpν in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: SmpMax/Six/CycleDecomposition.lean:122:31: Variable name `hm0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Six/CycleDecomposition.lean:153:0: automatically included section variable(s) unused in theorem `orbit_mem_iff`:
+  hpμ
+  hpν
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit hpμ hpν in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: SmpMax/Six/CycleDecomposition.lean:153:36: Variable name `hm0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [867/1438] Replayed SmpMax.Six.ChainToSchedule
+warning: SmpMax/Six/ChainToSchedule.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ChainToSchedule.lean:301:0: automatically included section variable(s) unused in theorem `list_eq_head_tail`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: SmpMax/Six/ChainToSchedule.lean:301:0: `list_eq_head_tail` does not use the following hypothesis in its type:
+  • [DecidableEq α] (#2)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+⚠ [868/1438] Replayed SmpMax.Six.ScheduleDominance
+warning: SmpMax/Six/ScheduleDominance.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ScheduleDominance.lean:95:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleDominance.lean:102:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleDominance.lean:115:58: Variable name `hw` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hw
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [869/1438] Replayed SmpMax.Six.NormalizeMatching
+warning: SmpMax/Six/NormalizeMatching.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/NormalizeMatching.lean:22:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/NormalizeMatching.lean:29:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/NormalizeMatching.lean:65:8: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/NormalizeMatching.lean:188:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [870/1438] Replayed SmpMax.Six.ScheduleEncoding
+warning: SmpMax/Six/ScheduleEncoding.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [871/1438] Replayed SmpMax.Six.CyclicShapes
+warning: SmpMax/Six/CyclicShapes.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/CyclicShapes.lean:282:4: Unused tactic linter: `first
+| done
+| (rw [← ih]; apply List.map_congr_left; intro p _; cases p; rfl)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: SmpMax/Six/CyclicShapes.lean:284:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: SmpMax/Six/CyclicShapes.lean:301:6: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [872/1438] Replayed SmpMax.Six.CampaignCubes
+warning: SmpMax/Six/CampaignCubes.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/CampaignCubes.lean:23:8: extra space in the source
+
+This part of the code
+  'steps   : List'
+should be written as
+  'steps : List'
+
+
+Note: This linter can be disabled with `set_option linter.style.whitespace false`
+⚠ [873/1438] Replayed SmpMax.Six.VariableDecoding
+warning: SmpMax/Six/VariableDecoding.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [874/1438] Replayed SmpMax.Six.TrajectoryPrefixes
+warning: SmpMax/Six/TrajectoryPrefixes.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [875/1438] Replayed SmpMax.Six.FrameAssignment
+warning: SmpMax/Six/FrameAssignment.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/FrameAssignment.lean:68:8: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hv0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [876/1438] Replayed SmpMax.Six.ReadOffSemantics
+warning: SmpMax/Six/ReadOffSemantics.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ReadOffSemantics.lean:150:38: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: SmpMax/Six/ReadOffSemantics.lean:151:19: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [877/1438] Replayed SmpMax.Six.ScheduleLength
+warning: SmpMax/Six/ScheduleLength.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ScheduleLength.lean:45:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SmpMax/Six/ScheduleLength.lean:116:49: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [List.length_cons, ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SmpMax/Six/ScheduleLength.lean:117:31: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ih]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SmpMax/Six/ScheduleLength.lean:140:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [878/1438] Replayed SmpMax.Six.ScheduleRelabeling
+warning: SmpMax/Six/ScheduleRelabeling.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/ScheduleRelabeling.lean:76:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleRelabeling.lean:172:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleRelabeling.lean:201:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleRelabeling.lean:253:6: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/ScheduleRelabeling.lean:260:4: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [879/1438] Replayed SmpMax.Six.CampaignSplits
+warning: SmpMax/Six/CampaignSplits.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/CampaignSplits.lean:1836:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: SmpMax/Six/CampaignSplits.lean:2799:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [880/1438] Replayed SmpMax.Six.PrefixLegality
+warning: SmpMax/Six/PrefixLegality.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [881/1438] Replayed SmpMax.Six.StateClauses
+warning: SmpMax/Six/StateClauses.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [882/1438] Replayed SmpMax.Six.GateClauses
+warning: SmpMax/Six/GateClauses.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/GateClauses.lean:15:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [883/1438] Replayed SmpMax.Six.TransitionClauses
+warning: SmpMax/Six/TransitionClauses.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [884/1438] Replayed SmpMax.Six.SelectionClauses
+warning: SmpMax/Six/SelectionClauses.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [885/1438] Replayed SmpMax.Six.CubeUnits
+warning: SmpMax/Six/CubeUnits.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [886/1438] Replayed SmpMax.Six.LowerBound
+warning: SmpMax/Six/LowerBound.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [887/1438] Replayed SmpMax.Six.FirstAppearance
+warning: SmpMax/Six/FirstAppearance.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/FirstAppearance.lean:307:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+⚠ [888/1438] Replayed SmpMax.Six.EncodingFaithfulness
+warning: SmpMax/Six/EncodingFaithfulness.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/EncodingFaithfulness.lean:23:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: SmpMax/Six/EncodingFaithfulness.lean:54:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/EncodingFaithfulness.lean:107:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [889/1438] Replayed SmpMax.Six.CubeCoverage
+warning: SmpMax/Six/CubeCoverage.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/Six/CubeCoverage.lean:6:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: SmpMax/Six/CubeCoverage.lean:65:2: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/CubeCoverage.lean:95:6: The `show` tactic should only be used to indicate intermediate goal states for readability.
+However, this tactic invocation changed the goal. Please use `change` instead for these purposes.
+
+Note: This linter can be disabled with `set_option linter.style.show false`
+warning: SmpMax/Six/CubeCoverage.lean:172:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: SmpMax/Six/CubeCoverage.lean:186:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+warning: SmpMax/Six/CubeCoverage.lean:191:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [890/1438] Replayed SmpMax.Six.ExactMaximum
+warning: SmpMax/Six/ExactMaximum.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [976/1438] Replayed SmpMax.General.GapSides
+warning: SmpMax/General/GapSides.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2268/2852] Replayed SmpMax.General.LogCutoff
+warning: SmpMax/General/LogCutoff.lean:80:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2270/2852] Replayed SmpMax.General.ExtendedRevelation
+warning: SmpMax/General/ExtendedRevelation.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2271/2852] Replayed SmpMax.General.PaddedOwners
+warning: SmpMax/General/PaddedOwners.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2272/2852] Replayed SmpMax.General.RelativeOrderProbability
+warning: SmpMax/General/RelativeOrderProbability.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2273/2852] Replayed SmpMax.General.FiniteAverageAlgebra
+warning: SmpMax/General/FiniteAverageAlgebra.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2274/2852] Replayed SmpMax.General.LocalGapEvents
+warning: SmpMax/General/LocalGapEvents.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2277/2852] Replayed SmpMax.General.RefinedLogBound
+warning: SmpMax/General/RefinedLogBound.lean:93:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2279/2852] Replayed SmpMax.General.RefinedLogCertificate
+warning: SmpMax/General/RefinedLogCertificate.lean:5689:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2281/2852] Replayed SmpMax.General.BidirectionalLogCertificate
+warning: SmpMax/General/BidirectionalLogCertificate.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2282/2852] Replayed SmpMax.General.LocalDirectionalSaving
+warning: SmpMax/General/LocalDirectionalSaving.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2283/2852] Replayed SmpMax.General.LocalGapGeometry
+warning: SmpMax/General/LocalGapGeometry.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2284/2852] Replayed SmpMax.General.PaddedSupport
+warning: SmpMax/General/PaddedSupport.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/General/PaddedSupport.lean:108:100: This line exceeds the 100 character limit, please shorten it!
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+⚠ [2285/2852] Replayed SmpMax.General.SuccessorCharging
+warning: SmpMax/General/SuccessorCharging.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2286/2852] Replayed SmpMax.General.MatchingDirectionalSaving
+warning: SmpMax/General/MatchingDirectionalSaving.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2287/2852] Replayed SmpMax.General.BidirectionalEntropyUpperBound
+warning: SmpMax/General/BidirectionalEntropyUpperBound.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2288/2852] Replayed SmpMax.General.LogCertificate
+warning: SmpMax/General/LogCertificate.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2289/2852] Replayed SmpMax.General.EntropyUpperBound
+warning: SmpMax/General/EntropyUpperBound.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2290/2852] Replayed SmpMax.General.JointCharging
+warning: SmpMax/General/JointCharging.lean:14:0: automatically included section variable(s) unused in theorem `SmpMax.General.SuccessorCharging.local_joint_charge_bound`:
+  [Fintype α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: SmpMax/General/JointCharging.lean:14:0: `local_joint_charge_bound` does not use the following hypothesis in its type:
+  • [Fintype α] (#2)
+
+Consider replacing this hypothesis with the corresponding instance of `Finite` and using `Fintype.ofFinite` in the proof, or removing it entirely.
+
+Note: This linter can be disabled with `set_option linter.unusedFintypeInType false`
+warning: SmpMax/General/JointCharging.lean:31:0: `sum_joint_saving_ge` does not use the following hypothesis in its type:
+  • [DecidableEq α] (#3)
+
+Consider removing this hypothesis and using `classical` in the proof instead. For terms, consider using `open scoped Classical in` at the term level (not the command level).
+
+Note: This linter can be disabled with `set_option linter.unusedDecidableInType false`
+⚠ [2291/2852] Replayed SmpMax.General.LongGapEvents
+warning: SmpMax/General/LongGapEvents.lean:16:0: Unscoped option maxHeartbeats is not allowed:
+Please scope this to individual declarations, as in
+```
+set_option maxHeartbeats in
+-- comment explaining why this is necessary
+example : ... := ...
+```
+
+Note: This linter can be disabled with `set_option linter.style.setOption false`
+⚠ [2292/2852] Replayed SmpMax.General.LongerLogCertificate
+warning: SmpMax/General/LongerLogCertificate.lean:15:0: Unscoped option maxHeartbeats is not allowed:
+Please scope this to individual declarations, as in
+```
+set_option maxHeartbeats in
+-- comment explaining why this is necessary
+example : ... := ...
+```
+
+Note: This linter can be disabled with `set_option linter.style.setOption false`
+⚠ [2299/2852] Replayed SmpMax.General.LongPaddedSupport
+warning: SmpMax/General/LongPaddedSupport.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2300/2852] Replayed SmpMax.General.LongMatchingDirectionalSaving
+warning: SmpMax/General/LongMatchingDirectionalSaving.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+⚠ [2305/2852] Replayed SmpMax.General.LongerEntropyUpperBound
+warning: SmpMax/General/LongerEntropyUpperBound.lean:1:1: * '-/':
+Copyright too short!
+
+
+Note: This linter can be disabled with `set_option linter.style.header false`
+warning: SmpMax/General/LongerEntropyUpperBound.lean:18:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in
+set_option maxHeartbeats 1000000 in
+-- reason for change
+...
+
+Note: This linter can be disabled with `set_option linter.style.maxHeartbeats false`
+⚠ [2307/2852] Replayed ExportFiveCnf
+warning: ExportFiveCnf.lean:20:100: This line exceeds the 100 character limit, please shorten it!
+You can use "string gaps" to format long strings: within a string quotation, using a '\' at the end of a line allows you to continue the string on the following line, removing all intervening whitespace.
+
+Note: This linter can be disabled with `set_option linter.style.longLine false`
+✔ [2851/2852] Built SmpMax (3.5s)
+Build completed successfully (2852 jobs).
+'f5_eq_16_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'chain_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'traj_mem_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'wtraj_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'total_moves_le_30' depends on axioms: [propext, Classical.choice, Quot.sound]
+'count_le_of_orderPreserving' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sc_le_readoffS_chainSched' depends on axioms: [propext, Classical.choice, Quot.sound]
+'manOpt_wrelabel6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'validity_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PM_sem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PW_sem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Legal_length_le_15' depends on axioms: [propext, Classical.choice, Quot.sound]
+'minFirst_mem_cyclicShapes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'permsN6_perm_permutations' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Legal_map_minFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchedCNF6.dec_pwVar3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'firstApp_relabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Legal_relabel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'sc_le_readoffS_relabelSched' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exists_canonical_schedule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'fits_final' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cube_faithful6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'dihedral6_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'f6_upper_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'f6_eq_48_of_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stable_pair_separation : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  {m w : Fin n},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ → ((I.men m) w < (I.men m) (μ m) ↔ (I.women w) ((Equiv.symm μ) w) < (I.women w) m)
+@SmpMax.General.compatible_same_side : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ ν : SmpMax.General.Matching n}
+  {revealed : Finset (Fin n)} {m w : Fin n},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ →
+      SmpMax.General.Compatible I μ revealed ν →
+        (Equiv.symm μ) w ∈ revealed → ((I.men m) w < (I.men m) (ν m) ↔ (I.men m) w < (I.men m) (μ m))
+@SmpMax.General.PartnerOrder.support_card_le_gap : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {m : Fin n}
+  (L : SmpMax.General.PartnerOrder I m) {μ : SmpMax.General.Matching n} {revealed : Finset (Fin n)} {t : Fin L.length}
+  {a b : ℕ},
+  SmpMax.General.Stable I μ →
+    L.partner t = μ m →
+      L.LowerCut μ revealed t a →
+        L.UpperCut μ revealed t b → (SmpMax.General.partnerSupportFinset I μ revealed m).card ≤ b - a - 1
+@SmpMax.General.PartnerOrder.owners_injective : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {m : Fin n}
+  (L : SmpMax.General.PartnerOrder I m) (μ : SmpMax.General.Matching n),
+  Function.Injective fun j => (Equiv.symm μ) (L.partner j)
+@SmpMax.General.Revelation.count_le_sum_cost : ∀ {α : Type u_1} {β : Type u_2} [inst : DecidableEq β]
+  (fs : List (α → β)) (s : Finset α),
+  SmpMax.General.Revelation.Separates fs s → ↑s.card * Real.log ↑s.card ≤ ∑ x ∈ s, SmpMax.General.Revelation.cost fs s x
+@SmpMax.General.stableCount_mul_log_le_sum_supportCost : ∀ {n : ℕ} (I : SmpMax.General.Profile n)
+  (order : List (Fin n)),
+  (∀ (m : Fin n), m ∈ order) →
+    ↑(SmpMax.General.stableCount I) * Real.log ↑(SmpMax.General.stableCount I) ≤
+      ∑ μ ∈ SmpMax.General.stableMatchings I, SmpMax.General.supportCost I μ ∅ order
+@SmpMax.General.PartnerOrder.support_card_le_revelationGap : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {m : Fin n}
+  (L : SmpMax.General.PartnerOrder I m) {μ : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    ∀ (π : Equiv.Perm (Fin n)) {t : Fin L.length},
+      L.partner t = μ m →
+        (SmpMax.General.partnerSupportFinset I μ (SmpMax.General.earlierMen π m) m).card ≤
+          SmpMax.General.Gap.size (L.revealedPositions μ π) t
+@SmpMax.General.Gap.size_ge_iff_window : ∀ {d : ℕ} {R : Finset (Fin d)} {t : Fin d},
+  t ∉ R →
+    ∀ {k : ℕ},
+      0 < k → (k ≤ SmpMax.General.Gap.size R t ↔ ∃ s, SmpMax.General.Gap.Window t k s ∧ SmpMax.General.Gap.Clear R k s)
+@SmpMax.General.PermutationCounting.card_mul_first_two : ∀ {n : ℕ} (S : Finset (Fin n)) {a b : Fin n},
+  a ∈ S →
+    b ∈ S.erase a →
+      S.card * (S.erase a).card *
+          (SmpMax.General.PermutationCounting.firstFilter
+              (SmpMax.General.PermutationCounting.firstFilter Finset.univ S a) (S.erase a) b).card =
+        Fintype.card (Equiv.Perm (Fin n))
+@SmpMax.General.Gap.long_gap_cover : ∀ {d : ℕ} {R : Finset (Fin d)} {t : Fin d},
+  t ∉ R →
+    ∀ {k : ℕ},
+      0 < k →
+        k ≤ SmpMax.General.Gap.size R t →
+          SmpMax.General.Gap.Clear R k (SmpMax.General.Gap.firstStart t k) ∨
+            ∃ s ∈ SmpMax.General.Gap.laterStarts t k, SmpMax.General.Gap.Clear R k s ∧ ∃ i, ↑i + 1 = s ∧ i ∈ R
+@SmpMax.General.Gap.probability_size_ge_le : ∀ {d n : ℕ} (owner : Fin d → Fin n),
+  Function.Injective owner →
+    ∀ (t : Fin d) {k : ℕ},
+      0 < k → SmpMax.General.FiniteProbability.probability (SmpMax.General.Gap.tailEvent owner t k) ≤ 2 / (↑k + 1)
+@SmpMax.General.FiniteProbability.average_log_eq_tail_sum : ∀ {Ω : Type u_1} [inst : Fintype Ω] (K : Ω → ℕ) (D : ℕ),
+  (∀ (x : Ω), 0 < K x) →
+    (∀ (x : Ω), K x ≤ D + 1) →
+      (SmpMax.General.FiniteProbability.average fun x => Real.log ↑(K x)) =
+        ∑ j ∈ Finset.range D,
+          SmpMax.General.FiniteProbability.probability (SmpMax.General.FiniteProbability.threshold K (j + 2)) *
+            SmpMax.General.logIncrement j
+@SmpMax.General.Gap.average_log_size_le_finiteLogBound : ∀ {d n : ℕ} (owner : Fin d → Fin n),
+  Function.Injective owner →
+    ∀ (t : Fin d) {N : ℕ},
+      0 < N →
+        (SmpMax.General.FiniteProbability.average fun π =>
+            Real.log ↑(SmpMax.General.Gap.size (SmpMax.General.Gap.revealedBy owner π t) t)) ≤
+          SmpMax.General.finiteLogBound N
+@SmpMax.General.stableCount_le_exp_finiteLogBound : ∀ {n : ℕ} (I : SmpMax.General.Profile n) {N : ℕ},
+  0 < N → ↑(SmpMax.General.stableCount I) ≤ Real.exp (↑n * SmpMax.General.finiteLogBound N)
+SmpMax.General.LogCertificate.finiteLogBound_512_lt_log : SmpMax.General.finiteLogBound 512 < Real.log (833 / 250)
+@SmpMax.General.stableCount_lt_3332_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (833 / 250) ^ n
+SmpMax.General.gapTerm_le_refined_difference : ∀ (j : ℕ),
+  SmpMax.General.gapTerm j ≤ SmpMax.General.refinedTail j - SmpMax.General.refinedTail (j + 1)
+@SmpMax.General.Gap.average_log_size_le_refinedLogBound : ∀ {d n : ℕ} (owner : Fin d → Fin n),
+  Function.Injective owner →
+    ∀ (t : Fin d) {N : ℕ},
+      0 < N →
+        (SmpMax.General.FiniteProbability.average fun π =>
+            Real.log ↑(SmpMax.General.Gap.size (SmpMax.General.Gap.revealedBy owner π t) t)) ≤
+          SmpMax.General.refinedLogBound N
+SmpMax.General.RefinedLogCertificate.refinedLogBound_512_lt_log : SmpMax.General.refinedLogBound 512 <
+  Real.log (1665987 / 500000)
+@SmpMax.General.stableCount_le_exp_of_average_log_support : ∀ {n : ℕ} (I : SmpMax.General.Profile n) (C : ℝ),
+  (∀ (μ : SmpMax.General.Matching n),
+      SmpMax.General.Stable I μ →
+        ∀ (m : Fin n),
+          (SmpMax.General.FiniteProbability.average fun π =>
+              Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.earlierMen π m) m).card) ≤
+            C) →
+    ↑(SmpMax.General.stableCount I) ≤ Real.exp (↑n * C)
+@SmpMax.General.stableCount_le_exp_refinedLogBound : ∀ {n : ℕ} (I : SmpMax.General.Profile n) {N : ℕ},
+  0 < N → ↑(SmpMax.General.stableCount I) ≤ Real.exp (↑n * SmpMax.General.refinedLogBound N)
+@SmpMax.General.stableCount_lt_3331974_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (1665987 / 500000) ^ n
+'SmpMax.General.stable_pair_separation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.compatible_same_side' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.PartnerOrder.support_card_le_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.PartnerOrder.owners_injective' depends on axioms: [propext, Quot.sound]
+'SmpMax.General.Revelation.count_le_sum_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.stableCount_mul_log_le_sum_supportCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.PartnerOrder.support_card_le_revelationGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.size_ge_iff_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.PermutationCounting.card_mul_first_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.long_gap_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.probability_size_ge_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.FiniteProbability.average_log_eq_tail_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.average_log_size_le_finiteLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.stableCount_le_exp_finiteLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.LogCertificate.finiteLogBound_512_lt_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.stableCount_lt_3332_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.gapTerm_le_refined_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.average_log_size_le_refinedLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.RefinedLogCertificate.refinedLogBound_512_lt_log' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.stableCount_le_exp_of_average_log_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.stableCount_le_exp_refinedLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.stableCount_lt_3331974_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.crossing_forces_owner_worse : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ ν : SmpMax.General.Matching n}
+  {m w : Fin n},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ →
+      SmpMax.General.Stable I ν →
+        (I.men m) (μ m) < (I.men m) w →
+          (I.men m) w ≤ (I.men m) (ν m) →
+            (I.men ((Equiv.symm μ) w)) (μ ((Equiv.symm μ) w)) < (I.men ((Equiv.symm μ) w)) (ν ((Equiv.symm μ) w))
+@SmpMax.General.worsening_propagates : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ ν : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    SmpMax.General.Stable I ν →
+      ∀ {m : Fin n},
+        (I.men m) (μ m) < (I.men m) (ν m) →
+          (I.men (SmpMax.General.successorOwner I μ m)) (μ (SmpMax.General.successorOwner I μ m)) <
+            (I.men (SmpMax.General.successorOwner I μ m)) (ν (SmpMax.General.successorOwner I μ m))
+@SmpMax.General.compatible_successor_upper_barrier : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ ν : SmpMax.General.Matching n} {m w : Fin n} {R : Finset (Fin n)},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ →
+      SmpMax.General.Compatible I μ R ν →
+        (I.men m) (μ m) < (I.men m) w →
+          SmpMax.General.successorOwner I μ ((Equiv.symm μ) w) ∈ R → (I.men m) (ν m) < (I.men m) w
+@SmpMax.General.SuccessorCharging.card_exceptions_le_twice_noncycles : ∀ {α : Type u_1} [inst : Fintype α]
+  [inst_1 : DecidableEq α] (g b : α → α) (D : Finset α),
+  (∀ m ∈ D, SmpMax.General.SuccessorCharging.Exceptional g b m) → D.card ≤ 2 * {u | g (g u) ≠ u}.card
+@SmpMax.General.SuccessorCharging.sum_saving_ge : ∀ {α : Type u_1} [inst : Fintype α] (g b : α → α) (D : Finset α),
+  (∀ m ∈ D, SmpMax.General.SuccessorCharging.Exceptional g b m) →
+    ∀ (s : α → ℝ) (δ : ℝ),
+      0 ≤ δ →
+        (∀ (m : α), 0 ≤ s m) →
+          (∀ m ∉ D, δ ≤ s m) → (∀ (m : α), g (g m) ≠ m → 3 * δ ≤ s m) → ↑(Fintype.card α) * δ ≤ ∑ m, s m
+@SmpMax.General.Gap.probability_size_ge_le_short : ∀ {d n : ℕ} (owner : Fin d → Fin n),
+  Function.Injective owner →
+    ∀ (t : Fin d),
+      d ≤ ↑t + 2 →
+        ∀ {k : ℕ},
+          0 < k →
+            SmpMax.General.FiniteProbability.probability (SmpMax.General.Gap.tailEvent owner t k) ≤
+              1 / ↑k + 1 / ((↑k + 1) * ↑k)
+@SmpMax.General.Gap.average_log_size_le_refined_sub_short : ∀ {d n : ℕ} (owner : Fin d → Fin n),
+  Function.Injective owner →
+    ∀ (t : Fin d),
+      d ≤ ↑t + 2 →
+        ∀ {N : ℕ},
+          0 < N →
+            (SmpMax.General.FiniteProbability.average fun π =>
+                Real.log ↑(SmpMax.General.Gap.size (SmpMax.General.Gap.revealedBy owner π t) t)) ≤
+              SmpMax.General.refinedLogBound N - SmpMax.General.shortSideSaving
+SmpMax.General.StructuralLogCertificate.shortSideSaving_ge_three : 3 * SmpMax.General.StructuralLogCertificate.saving ≤
+  SmpMax.General.shortSideSaving
+SmpMax.General.StructuralLogCertificate.second_step_saving_eq : SmpMax.General.logIncrement 1 / 30 +
+    SmpMax.General.logIncrement 2 / 60 =
+  SmpMax.General.StructuralLogCertificate.saving
+SmpMax.General.StructuralLogCertificate.rational_power_comparison : (1665987 / 500000) ^ 60 < 3 * (409 / 125) ^ 60
+SmpMax.General.StructuralLogCertificate.refinedLogBound_sub_saving_lt_log : SmpMax.General.refinedLogBound 512 -
+    SmpMax.General.StructuralLogCertificate.saving <
+  Real.log (409 / 125)
+'SmpMax.General.crossing_forces_owner_worse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.worsening_propagates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.compatible_successor_upper_barrier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.SuccessorCharging.card_exceptions_le_twice_noncycles' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.SuccessorCharging.sum_saving_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.probability_size_ge_le_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.Gap.average_log_size_le_refined_sub_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.StructuralLogCertificate.shortSideSaving_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.StructuralLogCertificate.second_step_saving_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.StructuralLogCertificate.rational_power_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.StructuralLogCertificate.refinedLogBound_sub_saving_lt_log' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.crossing_forces_owner_better : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ ν : SmpMax.General.Matching n} {m w : Fin n},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ →
+      SmpMax.General.Stable I ν →
+        (I.men m) w < (I.men m) (μ m) →
+          (I.men m) (ν m) ≤ (I.men m) w →
+            (I.men ((Equiv.symm μ) w)) (ν ((Equiv.symm μ) w)) < (I.men ((Equiv.symm μ) w)) (μ ((Equiv.symm μ) w))
+@SmpMax.General.improving_propagates : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ ν : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    SmpMax.General.Stable I ν →
+      ∀ {m : Fin n},
+        (I.men m) (ν m) < (I.men m) (μ m) →
+          (I.men (SmpMax.General.predecessorOwner I μ m)) (ν (SmpMax.General.predecessorOwner I μ m)) <
+            (I.men (SmpMax.General.predecessorOwner I μ m)) (μ (SmpMax.General.predecessorOwner I μ m))
+@SmpMax.General.compatible_predecessor_lower_barrier : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ ν : SmpMax.General.Matching n} {m w : Fin n} {R : Finset (Fin n)},
+  SmpMax.General.StablePair I m w →
+    SmpMax.General.Stable I μ →
+      SmpMax.General.Compatible I μ R ν →
+        (I.men m) w < (I.men m) (μ m) →
+          SmpMax.General.predecessorOwner I μ ((Equiv.symm μ) w) ∈ R → (I.men m) w < (I.men m) (ν m)
+@SmpMax.General.BidirectionalGap.log_caps_superadditive : ∀ {L R l r : ℝ},
+  0 ≤ l →
+    0 ≤ r →
+      l ≤ L →
+        r ≤ R →
+          Real.log (1 + L + R) - Real.log (1 + l + R) + (Real.log (1 + L + R) - Real.log (1 + L + r)) ≤
+            Real.log (1 + L + R) - Real.log (1 + l + r)
+@SmpMax.General.BidirectionalGap.log_support_le_sub_losses : ∀ {L R l r X : ℝ},
+  0 ≤ l →
+    0 ≤ r →
+      l ≤ L →
+        r ≤ R →
+          0 < X →
+            X ≤ 1 + l + r →
+              Real.log X ≤
+                Real.log (1 + L + R) - (Real.log (1 + L + R) - Real.log (1 + l + R)) -
+                  (Real.log (1 + L + R) - Real.log (1 + L + r))
+@SmpMax.General.BidirectionalGap.directional_loss_ge : ∀ {L R r q k : ℝ},
+  0 ≤ L →
+    0 ≤ r →
+      r ≤ q → k ≤ R → 0 ≤ k → Real.log (1 + L + k) - Real.log (1 + L + q) ≤ Real.log (1 + L + R) - Real.log (1 + L + r)
+SmpMax.General.BidirectionalLogCertificate.shortSideSaving_ge_three : 3 *
+    SmpMax.General.BidirectionalLogCertificate.saving ≤
+  SmpMax.General.shortSideSaving
+SmpMax.General.BidirectionalLogCertificate.firstStepSaving_ge_three : 3 *
+    SmpMax.General.BidirectionalLogCertificate.saving ≤
+  SmpMax.General.BidirectionalLogCertificate.firstStepSaving
+SmpMax.General.BidirectionalLogCertificate.secondStepSaving_eq : SmpMax.General.logIncrement 1 / 30 +
+      SmpMax.General.logIncrement 2 / 60 +
+    SmpMax.General.logIncrement 3 / 105 =
+  SmpMax.General.BidirectionalLogCertificate.saving
+SmpMax.General.BidirectionalLogCertificate.firstStepSaving_le_first_coincidence : SmpMax.General.BidirectionalLogCertificate.firstStepSaving ≤
+  Real.log 2 / 6
+SmpMax.General.BidirectionalLogCertificate.saving_le_first_coincidence : SmpMax.General.BidirectionalLogCertificate.saving ≤
+  SmpMax.General.logIncrement 1 / 12
+SmpMax.General.BidirectionalLogCertificate.saving_le_second_coincidence : SmpMax.General.BidirectionalLogCertificate.saving ≤
+  SmpMax.General.logIncrement 1 / 30 + SmpMax.General.logIncrement 2 / 20
+SmpMax.General.BidirectionalLogCertificate.saving_le_third_coincidence : SmpMax.General.BidirectionalLogCertificate.saving ≤
+  SmpMax.General.logIncrement 1 / 30 + SmpMax.General.logIncrement 2 / 60 + SmpMax.General.logIncrement 3 / 30
+SmpMax.General.BidirectionalLogCertificate.rational_power_comparison : (1665987 / 500000) ^ 210 <
+  3 ^ 7 * (5 / 4) ^ 4 * (16 / 5) ^ 210
+SmpMax.General.BidirectionalLogCertificate.refinedLogBound_sub_two_savings_lt_log : SmpMax.General.refinedLogBound 512 -
+    2 * SmpMax.General.BidirectionalLogCertificate.saving <
+  Real.log (16 / 5)
+'SmpMax.General.crossing_forces_owner_better' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.improving_propagates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.compatible_predecessor_lower_barrier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.BidirectionalGap.log_caps_superadditive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.BidirectionalGap.log_support_le_sub_losses' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.BidirectionalGap.directional_loss_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.shortSideSaving_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.firstStepSaving_ge_three' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.secondStepSaving_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.firstStepSaving_le_first_coincidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.saving_le_first_coincidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.saving_le_second_coincidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.saving_le_third_coincidence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.rational_power_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SmpMax.General.BidirectionalLogCertificate.refinedLogBound_sub_two_savings_lt_log' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.PermutationCounting.card_mul_first_three : ∀ {n : ℕ} (S : Finset (Fin n)) {a b c : Fin n},
+  a ∈ S →
+    b ∈ S.erase a →
+      c ∈ (S.erase a).erase b →
+        S.card * (S.erase a).card * ((S.erase a).erase b).card *
+            (SmpMax.General.PermutationCounting.firstFilter
+                (SmpMax.General.PermutationCounting.firstFilter
+                  (SmpMax.General.PermutationCounting.firstFilter Finset.univ S a) (S.erase a) b)
+                ((S.erase a).erase b) c).card =
+          Fintype.card (Equiv.Perm (Fin n))
+'SmpMax.General.PermutationCounting.card_mul_first_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PermutationCounting.probability_beforeOne : ∀ {n : ℕ} {a m : Fin n} {A : Finset (Fin n)},
+  a ≠ m →
+    a ∉ A →
+      m ∉ A →
+        SmpMax.General.FiniteProbability.probability (SmpMax.General.PermutationCounting.beforeOne a m A) =
+          1 / ((↑A.card + 2) * (↑A.card + 1))
+'SmpMax.General.PermutationCounting.probability_beforeOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PermutationCounting.probability_beforeTwo : ∀ {n : ℕ} {a b m : Fin n} {A : Finset (Fin n)},
+  a ≠ b →
+    a ≠ m →
+      b ≠ m →
+        a ∉ A →
+          b ∉ A →
+            m ∉ A →
+              SmpMax.General.FiniteProbability.probability (SmpMax.General.PermutationCounting.beforeTwo a b m A) =
+                2 / ((↑A.card + 3) * (↑A.card + 2) * (↑A.card + 1))
+'SmpMax.General.PermutationCounting.probability_beforeTwo' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_le_exp_of_average_rank_sum : ∀ {n N : ℕ} {Ω : Type u_1} [inst : Fintype Ω] [Nonempty Ω]
+  (I : SmpMax.General.Profile n) (rank : Ω → Fin n → Fin N),
+  (∀ (ω : Ω), Function.Injective (rank ω)) →
+    ∀ (C : ℝ),
+      (∀ (μ : SmpMax.General.Matching n),
+          SmpMax.General.Stable I μ →
+            (SmpMax.General.FiniteProbability.average fun ω =>
+                ∑ m,
+                  Real.log
+                    ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.earlierByRank (rank ω) m) m).card) ≤
+              ↑n * C) →
+        ↑(SmpMax.General.stableCount I) ≤ Real.exp (↑n * C)
+'SmpMax.General.stableCount_le_exp_of_average_rank_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.FiniteProbability.disjoint_events_average : ∀ {Ω : Type u_1} [inst : Fintype Ω] [Nonempty Ω]
+  {ι : Type u_2} (S : Finset ι) (E : ι → Finset Ω) (w : ι → ℝ) (f : Ω → ℝ),
+  (∀ (ω : Ω), 0 ≤ f ω) →
+    (∀ i ∈ S, ∀ ω ∈ E i, w i ≤ f ω) →
+      (∀ i ∈ S, ∀ j ∈ S, ∀ ω ∈ E i, ω ∈ E j → i = j) →
+        ∑ i ∈ S, SmpMax.General.FiniteProbability.probability (E i) * w i ≤ SmpMax.General.FiniteProbability.average f
+'SmpMax.General.FiniteProbability.disjoint_events_average' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LocalGap.probability_twoEvent : ∀ {N : ℕ} (f : Fin 7 → Fin N),
+  Function.Injective f →
+    ∀ (u : Fin N),
+      u ≠ f 0 →
+        ∀ {j k : ℕ} (hj : j ≤ 2),
+          k ≤ 3 →
+            SmpMax.General.FiniteProbability.probability (SmpMax.General.LocalGap.twoEvent f u j k hj) =
+              if u = f (SmpMax.General.LocalGap.boundary j hj) then 1 / (↑(j + k) + 2) / (↑(j + k) + 1)
+              else
+                if u ∈ SmpMax.General.LocalGap.afterLabels f j k then 0
+                else 2 / (↑(j + k) + 3) / (↑(j + k) + 2) / (↑(j + k) + 1)
+'SmpMax.General.LocalGap.probability_twoEvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LocalGap.DirectionalData.short_saving : ∀ {N : ℕ} (D : SmpMax.General.LocalGap.DirectionalData N),
+  (∀ (π : Equiv.Perm (Fin N)), D.cap π ≤ 1) →
+    SmpMax.General.shortSideSaving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LocalGap.DirectionalData.short_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LocalGap.DirectionalData.first_step_saving : ∀ {N : ℕ} (D : SmpMax.General.LocalGap.DirectionalData N)
+  (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 0) →
+        SmpMax.General.BidirectionalLogCertificate.firstStepSaving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LocalGap.DirectionalData.first_step_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LocalGap.DirectionalData.second_step_saving : ∀ {N : ℕ} (D : SmpMax.General.LocalGap.DirectionalData N)
+  (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      u ≠ D.label 2 →
+        (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 1) →
+          SmpMax.General.BidirectionalLogCertificate.saving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LocalGap.DirectionalData.second_step_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LocalGap.event_lengths : ∀ {d N : ℕ} (owner : Fin d → Fin N) (t : Fin d) (hl : 3 ≤ ↑t) (hr : ↑t + 3 < d)
+  (right : Bool) {j k : ℕ} (hj : j ≤ 2),
+  k ≤ 3 →
+    ∀ π ∈ SmpMax.General.LocalGap.oneEvent (SmpMax.General.LocalGap.localLabels owner t hl hr right) j k hj,
+      (if right = true then SmpMax.General.Gap.leftSize (SmpMax.General.Gap.revealedBy owner π t) t
+          else SmpMax.General.Gap.rightSize (SmpMax.General.Gap.revealedBy owner π t) t) =
+          j ∧
+        k ≤
+          if right = true then SmpMax.General.Gap.rightSize (SmpMax.General.Gap.revealedBy owner π t) t
+          else SmpMax.General.Gap.leftSize (SmpMax.General.Gap.revealedBy owner π t) t
+'SmpMax.General.LocalGap.event_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.Padded.owner_injective : ∀ {d n : ℕ} (f : Fin d → Fin n),
+  Function.Injective f → Function.Injective (SmpMax.General.Padded.owner f)
+'SmpMax.General.Padded.owner_injective' depends on axioms: [propext, Quot.sound]
+@SmpMax.General.SupportCaps.card_le : ∀ {d : ℕ} (S : Finset (Fin d)) (t : Fin d),
+  S.card ≤ 1 + SmpMax.General.SupportCaps.left S t + SmpMax.General.SupportCaps.right S t
+'SmpMax.General.SupportCaps.card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.directionOwner_eq_neighbor : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (right : Bool)
+  (hk : 1 ≤ F.sideLength right), SmpMax.General.directionOwner I μ right m = F.neighborOwner right 1 hk
+'SmpMax.General.PartnerFrame.directionOwner_eq_neighbor' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.neighborOwner_active : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (right : Bool) {k : ℕ},
+      0 < k →
+        ∀ (hk : k ≤ F.sideLength right),
+          SmpMax.General.directionOwner I μ right (F.neighborOwner right k hk) ≠ F.neighborOwner right k hk
+'SmpMax.General.PartnerFrame.neighborOwner_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.cap_le_of_propagated : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (right : Bool) {q : ℕ} (hk : q + 1 ≤ F.sideLength right) (R : Finset (Fin n)),
+      SmpMax.General.directionOwner I μ right (F.neighborOwner right (q + 1) hk) ∈ R → F.cap right R ≤ q
+'SmpMax.General.PartnerFrame.cap_le_of_propagated' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.support_between_padded : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (π : Equiv.Perm (Fin (n + 6))) {j : Fin F.L.length},
+      j ∈ F.L.indexSupport μ (SmpMax.General.Padded.earlier π m) →
+        SmpMax.General.Gap.lower (F.paddedSeen π) (SmpMax.General.Padded.position F.t) ≤ ↑j + 3 ∧
+          ↑j + 4 < SmpMax.General.Gap.upper (F.paddedSeen π) (SmpMax.General.Padded.position F.t)
+'SmpMax.General.PartnerFrame.support_between_padded' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.cap_le_padded : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (right : Bool) (π : Equiv.Perm (Fin (n + 6))),
+      F.cap right (SmpMax.General.Padded.earlier π m) ≤
+        if right = true then SmpMax.General.Gap.rightSize (F.paddedSeen π) (SmpMax.General.Padded.position F.t)
+        else SmpMax.General.Gap.leftSize (F.paddedSeen π) (SmpMax.General.Padded.position F.t)
+'SmpMax.General.PartnerFrame.cap_le_padded' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.meanSaving_first : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ) (right : Bool),
+  1 ≤ F.sideLength right →
+    SmpMax.General.directionOwner I μ right (SmpMax.General.directionOwner I μ right m) ≠ m →
+      3 * SmpMax.General.BidirectionalLogCertificate.saving ≤ F.meanSaving hμ right
+'SmpMax.General.PartnerFrame.meanSaving_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.meanSaving_second : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (right : Bool) (hs : 2 ≤ F.sideLength right),
+  SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ m →
+    SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ SmpMax.General.directionOwner I μ right m →
+      SmpMax.General.BidirectionalLogCertificate.saving ≤ F.meanSaving hμ right
+'SmpMax.General.PartnerFrame.meanSaving_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.sum_directional_savings : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  (hμ : SmpMax.General.Stable I μ) (F : (m : Fin n) → SmpMax.General.PartnerFrame I μ m) (right : Bool),
+  ↑n * SmpMax.General.BidirectionalLogCertificate.saving ≤ ∑ m, (F m).meanSaving hμ right
+'SmpMax.General.sum_directional_savings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.log_support_le_two_losses : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (π : Equiv.Perm (Fin (n + 6))),
+  Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.Padded.earlier π m) m).card ≤
+    Real.log ↑(SmpMax.General.Gap.size (F.paddedSeen π) (SmpMax.General.Padded.position F.t)) -
+        (F.directional hμ false).loss π -
+      (F.directional hμ true).loss π
+'SmpMax.General.PartnerFrame.log_support_le_two_losses' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.average_sum_log_support_le_bidirectional : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    ∀ {N : ℕ},
+      0 < N →
+        (SmpMax.General.FiniteProbability.average fun π =>
+            ∑ m, Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.Padded.earlier π m) m).card) ≤
+          ↑n * (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.BidirectionalLogCertificate.saving)
+'SmpMax.General.average_sum_log_support_le_bidirectional' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_le_exp_bidirectionalLogBound : ∀ {n : ℕ} (I : SmpMax.General.Profile n) {N : ℕ},
+  0 < N →
+    ↑(SmpMax.General.stableCount I) ≤
+      Real.exp (↑n * (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.BidirectionalLogCertificate.saving))
+'SmpMax.General.stableCount_le_exp_bidirectionalLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_lt_32_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (16 / 5) ^ n
+'SmpMax.General.stableCount_lt_32_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongerLogCertificate.incrementFloor_le : ∀ {j : ℕ},
+  j ≤ 24 → ↑(SmpMax.General.LongerLogCertificate.incrementFloor j) ≤ SmpMax.General.logIncrement j
+'SmpMax.General.LongerLogCertificate.incrementFloor_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.LongerLogCertificate.row_saving_ge : ∀ (i : Fin 25),
+  SmpMax.General.LongerLogCertificate.saving ≤
+    ∑ j, ↑(SmpMax.General.LongerLogCertificate.eventWeight ↑i ↑j) * SmpMax.General.logIncrement (↑j + 1)
+'SmpMax.General.LongerLogCertificate.row_saving_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.LongerLogCertificate.shortSaving_ge_three : 3 * SmpMax.General.LongerLogCertificate.saving ≤
+  SmpMax.General.LongerLogCertificate.shortSaving
+'SmpMax.General.LongerLogCertificate.shortSaving_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.LongerLogCertificate.firstSaving_ge_three : 3 * SmpMax.General.LongerLogCertificate.saving ≤
+  SmpMax.General.BidirectionalLogCertificate.firstStepSaving
+'SmpMax.General.LongerLogCertificate.firstSaving_ge_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.LongerLogCertificate.refinedLogBound_sub_two_savings_lt_log : SmpMax.General.refinedLogBound 512 -
+    2 * SmpMax.General.LongerLogCertificate.saving <
+  Real.log (159 / 50)
+'SmpMax.General.LongerLogCertificate.refinedLogBound_sub_two_savings_lt_log' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.LongGap.probability_twoEvent : ∀ {N : ℕ} (f : Fin 49 → Fin N),
+  Function.Injective f →
+    ∀ (u : Fin N),
+      u ≠ f 0 →
+        ∀ {j k : ℕ} (hj : j ≤ 23),
+          k ≤ 3 →
+            SmpMax.General.FiniteProbability.probability (SmpMax.General.LongGap.twoEvent f u j k hj) =
+              if u = f (SmpMax.General.LongGap.boundary j hj) then 1 / (↑(j + k) + 2) / (↑(j + k) + 1)
+              else
+                if u ∈ SmpMax.General.LongGap.afterLabels f j k then 0
+                else 2 / (↑(j + k) + 3) / (↑(j + k) + 2) / (↑(j + k) + 1)
+'SmpMax.General.LongGap.probability_twoEvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.exists_second_row : ∀ {N : ℕ} (f : Fin 49 → Fin N),
+  Function.Injective f →
+    ∀ (u : Fin N),
+      u ≠ f 0 →
+        u ≠ f 1 →
+          u ≠ f 2 →
+            ∃ i,
+              ∀ (j : Fin 24),
+                SmpMax.General.FiniteProbability.probability (SmpMax.General.LongGap.twoEvent f u (↑j) 2 ⋯) =
+                  ↑(SmpMax.General.LongerLogCertificate.eventWeight ↑i ↑j)
+'SmpMax.General.LongGap.exists_second_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.DirectionalData.short_saving : ∀ {N : ℕ} (D : SmpMax.General.LongGap.DirectionalData N),
+  (∀ (π : Equiv.Perm (Fin N)), D.cap π ≤ 1) →
+    SmpMax.General.LongerLogCertificate.shortSaving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LongGap.DirectionalData.short_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.DirectionalData.first_step_saving : ∀ {N : ℕ} (D : SmpMax.General.LongGap.DirectionalData N)
+  (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 0) →
+        SmpMax.General.BidirectionalLogCertificate.firstStepSaving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LongGap.DirectionalData.first_step_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.DirectionalData.second_step_saving : ∀ {N : ℕ} (D : SmpMax.General.LongGap.DirectionalData N)
+  (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      u ≠ D.label 2 →
+        (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 1) →
+          SmpMax.General.LongerLogCertificate.saving ≤ SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LongGap.DirectionalData.second_step_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.event_lengths : ∀ {d N : ℕ} (owner : Fin d → Fin N) (t : Fin d) (hl : 24 ≤ ↑t)
+  (hr : ↑t + 24 < d) (right : Bool) {j k : ℕ} (hj : j ≤ 23),
+  k ≤ 3 →
+    ∀ π ∈ SmpMax.General.LongGap.oneEvent (SmpMax.General.LongGap.localLabels owner t hl hr right) j k hj,
+      (if right = true then SmpMax.General.Gap.leftSize (SmpMax.General.Gap.revealedBy owner π t) t
+          else SmpMax.General.Gap.rightSize (SmpMax.General.Gap.revealedBy owner π t) t) =
+          j ∧
+        k ≤
+          if right = true then SmpMax.General.Gap.rightSize (SmpMax.General.Gap.revealedBy owner π t) t
+          else SmpMax.General.Gap.leftSize (SmpMax.General.Gap.revealedBy owner π t) t
+'SmpMax.General.LongGap.event_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongPadded.owner_injective : ∀ {d n : ℕ} (f : Fin d → Fin n),
+  Function.Injective f → Function.Injective (SmpMax.General.LongPadded.owner f)
+'SmpMax.General.LongPadded.owner_injective' depends on axioms: [propext, Quot.sound]
+@SmpMax.General.PartnerFrame.support_between_long_gap : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (π : Equiv.Perm (Fin (n + 48))) {j : Fin F.L.length},
+      j ∈ F.L.indexSupport μ (SmpMax.General.LongPadded.earlier π m) →
+        SmpMax.General.Gap.lower (F.longSeen π) (SmpMax.General.LongPadded.position F.t) ≤ ↑j + 24 ∧
+          ↑j + 25 < SmpMax.General.Gap.upper (F.longSeen π) (SmpMax.General.LongPadded.position F.t)
+'SmpMax.General.PartnerFrame.support_between_long_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.cap_le_long_gap : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m),
+  SmpMax.General.Stable I μ →
+    ∀ (right : Bool) (π : Equiv.Perm (Fin (n + 48))),
+      F.cap right (SmpMax.General.LongPadded.earlier π m) ≤
+        if right = true then SmpMax.General.Gap.rightSize (F.longSeen π) (SmpMax.General.LongPadded.position F.t)
+        else SmpMax.General.Gap.leftSize (F.longSeen π) (SmpMax.General.LongPadded.position F.t)
+'SmpMax.General.PartnerFrame.cap_le_long_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.longMeanSaving_first : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (right : Bool),
+  1 ≤ F.sideLength right →
+    SmpMax.General.directionOwner I μ right (SmpMax.General.directionOwner I μ right m) ≠ m →
+      3 * SmpMax.General.LongerLogCertificate.saving ≤ F.longMeanSaving hμ right
+'SmpMax.General.PartnerFrame.longMeanSaving_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.longMeanSaving_second : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (right : Bool) (hs : 2 ≤ F.sideLength right),
+  SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ m →
+    SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ SmpMax.General.directionOwner I μ right m →
+      SmpMax.General.LongerLogCertificate.saving ≤ F.longMeanSaving hμ right
+'SmpMax.General.PartnerFrame.longMeanSaving_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.sum_long_directional_savings : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  (hμ : SmpMax.General.Stable I μ) (F : (m : Fin n) → SmpMax.General.PartnerFrame I μ m) (right : Bool),
+  ↑n * SmpMax.General.LongerLogCertificate.saving ≤ ∑ m, (F m).longMeanSaving hμ right
+'SmpMax.General.sum_long_directional_savings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.log_support_le_long_losses : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (π : Equiv.Perm (Fin (n + 48))),
+  Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.LongPadded.earlier π m) m).card ≤
+    Real.log ↑(SmpMax.General.Gap.size (F.longSeen π) (SmpMax.General.LongPadded.position F.t)) -
+        (F.longDirectional hμ false).loss π -
+      (F.longDirectional hμ true).loss π
+'SmpMax.General.PartnerFrame.log_support_le_long_losses' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.average_sum_log_support_le_long_events : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    ∀ {N : ℕ},
+      0 < N →
+        (SmpMax.General.FiniteProbability.average fun π =>
+            ∑ m, Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.LongPadded.earlier π m) m).card) ≤
+          ↑n * (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.LongerLogCertificate.saving)
+'SmpMax.General.average_sum_log_support_le_long_events' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_le_exp_longerLogBound : ∀ {n : ℕ} (I : SmpMax.General.Profile n) {N : ℕ},
+  0 < N →
+    ↑(SmpMax.General.stableCount I) ≤
+      Real.exp (↑n * (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.LongerLogCertificate.saving))
+'SmpMax.General.stableCount_le_exp_longerLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_lt_318_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (159 / 50) ^ n
+'SmpMax.General.stableCount_lt_318_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.JointGap.loss_nonneg : ∀ {L R l r : ℝ},
+  0 ≤ l → 0 ≤ r → l ≤ L → r ≤ R → 0 ≤ SmpMax.General.JointGap.loss L R l r
+'SmpMax.General.JointGap.loss_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.JointGap.loss_ge : ∀ {L R l r : ℝ},
+  0 ≤ l → 0 ≤ r → 2 ≤ L → 2 ≤ R → l ≤ 1 → r ≤ 1 → Real.log (16 / 15) ≤ SmpMax.General.JointGap.loss L R l r
+'SmpMax.General.JointGap.loss_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.JointLogCertificate.jointSaving_le : SmpMax.General.JointLogCertificate.jointSaving ≤
+  Real.log (16 / 15) / 105
+'SmpMax.General.JointLogCertificate.jointSaving_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.JointLogCertificate.short_ge : 3 *
+    (SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving) ≤
+  SmpMax.General.LongerLogCertificate.shortSaving
+'SmpMax.General.JointLogCertificate.short_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.JointLogCertificate.first_outside_ge : 3 *
+    (SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving) ≤
+  SmpMax.General.logIncrement 0 / 12 + SmpMax.General.logIncrement 1 / 30 + SmpMax.General.logIncrement 2 / 60
+'SmpMax.General.JointLogCertificate.first_outside_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+SmpMax.General.JointLogCertificate.refinedLogBound_sub_savings_lt_log : SmpMax.General.refinedLogBound 512 -
+      2 * SmpMax.General.LongerLogCertificate.saving -
+    SmpMax.General.JointLogCertificate.jointSaving <
+  Real.log (1589 / 500)
+'SmpMax.General.JointLogCertificate.refinedLogBound_sub_savings_lt_log' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.LongGap.DirectionalData.first_step_joint_saving : ∀ {N : ℕ}
+  (D : SmpMax.General.LongGap.DirectionalData N) (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 0) →
+        3 * (SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving) ≤
+          SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LongGap.DirectionalData.first_step_joint_saving' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.LongGap.DirectionalData.second_step_collision_saving : ∀ {N : ℕ}
+  (D : SmpMax.General.LongGap.DirectionalData N) (u : Fin N),
+  u ≠ D.label 0 →
+    u ≠ D.label 1 →
+      u ≠ D.label 2 →
+        u = D.label 25 ∨ u = D.label 26 →
+          (∀ (π : Equiv.Perm (Fin N)), π u < π (D.label 0) → D.cap π ≤ 1) →
+            SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving ≤
+              SmpMax.General.FiniteProbability.average D.loss
+'SmpMax.General.LongGap.DirectionalData.second_step_collision_saving' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@SmpMax.General.LongGap.cut_side_ge_two : ∀ {d N : ℕ} (owner : Fin d → Fin N) (t : Fin d) (hl : 24 ≤ ↑t)
+  (hr : ↑t + 24 < d) (right : Bool) (π : Equiv.Perm (Fin N)),
+  π (owner t) < π (SmpMax.General.LongGap.localLabels owner t hl hr right 1) →
+    π (owner t) < π (SmpMax.General.LongGap.localLabels owner t hl hr right 2) →
+      2 ≤
+        if right = true then SmpMax.General.Gap.rightSize (SmpMax.General.Gap.revealedBy owner π t) t
+        else SmpMax.General.Gap.leftSize (SmpMax.General.Gap.revealedBy owner π t) t
+'SmpMax.General.LongGap.cut_side_ge_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.LongGap.joint_probability_ge : ∀ {N : ℕ} (f : Fin 49 → Fin N),
+  Function.Injective f →
+    ∀ (u v : Fin N),
+      u ≠ f 0 →
+        v ≠ f 0 →
+          u ∉ SmpMax.General.LongGap.afterLabels f 2 2 →
+            v ∉ SmpMax.General.LongGap.afterLabels f 2 2 →
+              1 / 105 ≤
+                SmpMax.General.FiniteProbability.probability
+                  (SmpMax.General.PermutationCounting.beforeTwo u v (f 0) (SmpMax.General.LongGap.afterLabels f 2 2))
+'SmpMax.General.LongGap.joint_probability_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.jointMeanSaving_ge : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (u v : Fin (n + 48)),
+  u ≠ (F.longDirectional hμ true).label 0 →
+    v ≠ (F.longDirectional hμ true).label 0 →
+      u ∉ SmpMax.General.LongGap.afterLabels (F.longDirectional hμ true).label 2 2 →
+        v ∉ SmpMax.General.LongGap.afterLabels (F.longDirectional hμ true).label 2 2 →
+          (∀ (π : Equiv.Perm (Fin (n + 48))),
+              π u < π (SmpMax.General.LongPadded.realLabel m) →
+                F.cap false (SmpMax.General.LongPadded.earlier π m) ≤ 1) →
+            (∀ (π : Equiv.Perm (Fin (n + 48))),
+                π v < π (SmpMax.General.LongPadded.realLabel m) →
+                  F.cap true (SmpMax.General.LongPadded.earlier π m) ≤ 1) →
+              SmpMax.General.JointLogCertificate.jointSaving ≤ SmpMax.General.FiniteProbability.average F.jointLoss
+'SmpMax.General.PartnerFrame.jointMeanSaving_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.combinedMeanSaving_regular : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (u v : Fin (n + 48)),
+  u ≠ (F.longDirectional hμ false).label 0 →
+    u ≠ (F.longDirectional hμ false).label 1 →
+      u ≠ (F.longDirectional hμ false).label 2 →
+        v ≠ (F.longDirectional hμ true).label 0 →
+          v ≠ (F.longDirectional hμ true).label 1 →
+            v ≠ (F.longDirectional hμ true).label 2 →
+              (∀ (π : Equiv.Perm (Fin (n + 48))),
+                  π u < π ((F.longDirectional hμ false).label 0) → (F.longDirectional hμ false).cap π ≤ 1) →
+                (∀ (π : Equiv.Perm (Fin (n + 48))),
+                    π v < π ((F.longDirectional hμ true).label 0) → (F.longDirectional hμ true).cap π ≤ 1) →
+                  2 * SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving ≤
+                    F.combinedMeanSaving hμ
+'SmpMax.General.PartnerFrame.combinedMeanSaving_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.SuccessorCharging.sum_joint_saving_ge : ∀ {α : Type u_1} [inst : Fintype α] [DecidableEq α]
+  (g₀ g₁ b₀ b₁ : α → α) (D₀ D₁ : Finset α),
+  (∀ m ∈ D₀, SmpMax.General.SuccessorCharging.Exceptional g₀ b₀ m) →
+    (∀ m ∈ D₁, SmpMax.General.SuccessorCharging.Exceptional g₁ b₁ m) →
+      ∀ (s₀ s₁ S : α → ℝ) (δ ε : ℝ),
+        0 ≤ δ →
+          0 ≤ ε →
+            (∀ (m : α), 0 ≤ s₀ m) →
+              (∀ (m : α), 0 ≤ s₁ m) →
+                (∀ m ∉ D₀, δ ≤ s₀ m) →
+                  (∀ m ∉ D₁, δ ≤ s₁ m) →
+                    (∀ (m : α), g₀ (g₀ m) ≠ m → 3 * (δ + ε) ≤ s₀ m) →
+                      (∀ (m : α), g₁ (g₁ m) ≠ m → 3 * (δ + ε) ≤ s₁ m) →
+                        (∀ (m : α), s₀ m + s₁ m ≤ S m) →
+                          (∀ m ∉ D₀, m ∉ D₁ → g₀ (g₀ m) = m → g₁ (g₁ m) = m → 2 * δ + ε ≤ S m) →
+                            ↑(Fintype.card α) * (2 * δ + ε) ≤ ∑ m, S m
+'SmpMax.General.SuccessorCharging.sum_joint_saving_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.second_joint_witness : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (right : Bool) (hs : 2 ≤ F.sideLength right),
+  SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ m →
+    SmpMax.General.directionOwner I μ right (F.neighborOwner right 2 hs) ≠ SmpMax.General.directionOwner I μ right m →
+      ∃ u,
+        u ≠ (F.longDirectional hμ right).label 0 ∧
+          u ≠ (F.longDirectional hμ right).label 1 ∧
+            u ≠ (F.longDirectional hμ right).label 2 ∧
+              ∀ (π : Equiv.Perm (Fin (n + 48))),
+                π u < π ((F.longDirectional hμ right).label 0) → (F.longDirectional hμ right).cap π ≤ 1
+'SmpMax.General.PartnerFrame.second_joint_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.sum_combined_savings : ∀ {n : ℕ} {I : SmpMax.General.Profile n} {μ : SmpMax.General.Matching n}
+  (hμ : SmpMax.General.Stable I μ) (F : (m : Fin n) → SmpMax.General.PartnerFrame I μ m),
+  ↑n * (2 * SmpMax.General.LongerLogCertificate.saving + SmpMax.General.JointLogCertificate.jointSaving) ≤
+    ∑ m, (F m).combinedMeanSaving hμ
+'SmpMax.General.sum_combined_savings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.PartnerFrame.log_support_le_joint_losses : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n} {m : Fin n} (F : SmpMax.General.PartnerFrame I μ m) (hμ : SmpMax.General.Stable I μ)
+  (π : Equiv.Perm (Fin (n + 48))),
+  Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.LongPadded.earlier π m) m).card ≤
+    Real.log ↑(SmpMax.General.Gap.size (F.longSeen π) (SmpMax.General.LongPadded.position F.t)) -
+          (F.longDirectional hμ false).loss π -
+        (F.longDirectional hμ true).loss π -
+      F.jointLoss π
+'SmpMax.General.PartnerFrame.log_support_le_joint_losses' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.average_sum_log_support_le_joint : ∀ {n : ℕ} {I : SmpMax.General.Profile n}
+  {μ : SmpMax.General.Matching n},
+  SmpMax.General.Stable I μ →
+    ∀ {N : ℕ},
+      0 < N →
+        (SmpMax.General.FiniteProbability.average fun π =>
+            ∑ m, Real.log ↑(SmpMax.General.partnerSupportFinset I μ (SmpMax.General.LongPadded.earlier π m) m).card) ≤
+          ↑n *
+            (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.LongerLogCertificate.saving -
+              SmpMax.General.JointLogCertificate.jointSaving)
+'SmpMax.General.average_sum_log_support_le_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_le_exp_jointLogBound : ∀ {n : ℕ} (I : SmpMax.General.Profile n) {N : ℕ},
+  0 < N →
+    ↑(SmpMax.General.stableCount I) ≤
+      Real.exp
+        (↑n *
+          (SmpMax.General.refinedLogBound N - 2 * SmpMax.General.LongerLogCertificate.saving -
+            SmpMax.General.JointLogCertificate.jointSaving))
+'SmpMax.General.stableCount_le_exp_jointLogBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@SmpMax.General.stableCount_lt_3178_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (1589 / 500) ^ n
+'SmpMax.General.stableCount_lt_3178_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'witness_has_16_stable_matchings' depends on axioms: [propext]
+checked 300, mismatches: 0
+'f4_ge11_unsat' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean build, axiom checks, standalone witness, differential count, and LRAT pilot passed.

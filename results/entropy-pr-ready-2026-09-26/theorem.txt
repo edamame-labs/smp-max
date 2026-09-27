@@ -1,0 +1,20 @@
+@SmpMax.General.stableCount_lt_3178_pow : ∀ {n : ℕ},
+  0 < n → ∀ (I : SmpMax.General.Profile n), ↑(SmpMax.General.stableCount I) < (1589 / 500) ^ n
+'SmpMax.General.stableCount_lt_3178_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure SmpMax.General.Profile (n : ℕ) : Type
+number of parameters: 1
+fields:
+  SmpMax.General.Profile.men : Fin n → Equiv.Perm (Fin n)
+  SmpMax.General.Profile.women : Fin n → Equiv.Perm (Fin n)
+constructor:
+  SmpMax.General.Profile.mk {n : ℕ} (men women : Fin n → Equiv.Perm (Fin n)) : SmpMax.General.Profile n
+@[reducible] def SmpMax.General.Matching : ℕ → Type :=
+fun n => Equiv.Perm (Fin n)
+def SmpMax.General.Blocks : {n : ℕ} → SmpMax.General.Profile n → SmpMax.General.Matching n → Fin n → Fin n → Prop :=
+fun {n} I μ m w => (I.men m) w < (I.men m) (μ m) ∧ (I.women w) m < (I.women w) ((Equiv.symm μ) w)
+def SmpMax.General.Stable : {n : ℕ} → SmpMax.General.Profile n → SmpMax.General.Matching n → Prop :=
+fun {n} I μ => ∀ (m w : Fin n), ¬SmpMax.General.Blocks I μ m w
+def SmpMax.General.stableMatchings : {n : ℕ} → SmpMax.General.Profile n → Finset (SmpMax.General.Matching n) :=
+fun {n} I => Finset.filter (SmpMax.General.Stable I) Finset.univ
+def SmpMax.General.stableCount : {n : ℕ} → SmpMax.General.Profile n → ℕ :=
+fun {n} I => (SmpMax.General.stableMatchings I).card

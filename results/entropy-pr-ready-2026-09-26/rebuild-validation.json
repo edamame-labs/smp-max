@@ -1,0 +1,38 @@
+{
+  "archive": "output/packages/smp-max-3.178-lean-review-2026-09-26.zip",
+  "sha256": "dedd6919281c34d87f4cafa85ac6b62ca0a4f274aa5838fbda0a153e6beb4f5e",
+  "bytes": 286543,
+  "payload_files": 127,
+  "crc_check": true,
+  "generated_build_files_excluded": true,
+  "clean_extraction_rebuild_and_verify_passed": true,
+  "steps": [
+    {
+      "command": [
+        "python3",
+        "tools/verify.py",
+        "--sources-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/tectonic",
+        "--only-cached",
+        "--untrusted",
+        "--outdir",
+        "build",
+        "PROOF.tex"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/verify.py",
+        "--sources-only"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

@@ -22,3 +22,8 @@ New computations belong in ignored `runs/` directories. Preserve completed
 journals and provenance fields even when paths or source names change.
 The structured witness JSON files are derived from the retained original
 instances and checked by the witness verifier.
+
+The [3.178 proof review checkpoint](entropy-pr-ready-2026-09-26/README.md)
+records the selected general proof contribution and the PDF reproduction
+fix. The standalone archive retains the full formal verification evidence;
+its producing source snapshot is `entropy-joint-saving-2026-09-23/source-snapshots.json`.

@@ -7,7 +7,7 @@ SAT certificates. The [evidence ledger](results.md) records the original runs.
 | Check | Establishes | Typical cost |
 |---|---|---|
 | Witness recount | Lower bounds 16, 48, 85 and 85 | Seconds |
-| Lean build and axioms | Both exact-maximum theorems, conditional on UNSAT | Initial dependency download and build: about 20–30 minutes |
+| Lean build and axioms | General 3.178 theorem; both fixed-order theorems conditional on UNSAT | Initial dependency download and build: about 20–30 minutes |
 | Campaign identity and audit | Complete cube coverage and every recorded formula hash | A few minutes after building |
 | Order-5 certificates | Independently checks all 120 upper-bound cubes | About 2–3 hours |
 | Order-6 certificates | Independently checks selected or all upper-bound cubes | Minutes for the 205-cube sample; about 300 core-hours for the full tree |
@@ -161,3 +161,23 @@ Auditing the journal and recomputing hashes do not re-check those certificates;
 fresh solving and checking are required for independent verification.
 The saved 205-cube second-machine check does not cover the whole tree.
 Order-5 certificates were also not archived and can be regenerated in step 4.
+
+## General upper-bound proof
+
+The same `bash tools/check_lean.sh` command also builds the 56 completed
+general modules and audits all 112 statements in
+[GeneralEntropy.lean](../lean/checks/GeneralEntropy.lean). Their axioms are
+subsets of `propext`, `Classical.choice`, and `Quot.sound`. The main
+`stableCount_lt_3178_pow` theorem has only the profile and positive-order
+hypotheses. See the [proof and package guide](general-upper-bound.md).
+
+For the exact public statement, definitions, and a final-module replay:
+
+```bash
+(cd lean && lake env lean ../packaging/3178/Check3178.lean)
+(cd lean && lake env leanchecker SmpMax.General.JointEntropyUpperBound)
+```
+
+The archive's own verifier can additionally replay all 45 target dependency
+modules. Rebuild its PDF into `build/` as described in the guide, preserving
+the root PDF required by the archive's file-identity check.

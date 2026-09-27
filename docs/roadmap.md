@@ -19,3 +19,8 @@ hypotheses. The [evidence ledger](results.md) records what has been checked.
 The [layout validation](layout-verification.md) records the preservation
 checks for this reorganization. The [order-6 design record](design/f6-faithfulness.md)
 describes completed obligations and their original lemma numbering.
+
+The [universal 3.178 upper bound](general-upper-bound.md) now has a complete
+Lean proof and an English review package. Independent review of its
+mathematical presentation and attribution is the next step before any
+priority claim or manuscript submission.

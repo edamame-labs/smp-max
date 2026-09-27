@@ -1,0 +1,11 @@
+{
+  "local_retained_artifacts_checked": 221,
+  "all_existing_local_artifacts_unchanged": true,
+  "completed_general_modules": 56,
+  "all_completed_general_modules_unchanged": true,
+  "original_source_checkpoint_sha256": "ef713c33772e0222e7d3eb1b2d9b2265ff2d9de979be8e24c53cd378aa3ebedf",
+  "original_lean_verifier_unchanged": true,
+  "inspected_pdf_unchanged_sha256": "1565e31e61c8cdae95a9e055428df0ff32a9881722abbc6ff23ad9dfb751823a",
+  "inspected_latex_unchanged_sha256": "c2765734e0db644532084bb89c0553d3f03edd49f505a4e2285de78a7535448a",
+  "scope": "The proposed PR includes the completed 56-module proof and a corrected package. Unrelated local research remains outside this contribution."
+}
