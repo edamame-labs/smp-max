@@ -1,9 +1,43 @@
 # smp-max: maximum numbers of stable matchings
 
-How many stable matchings can a stable-marriage instance have? Let **f(n)**
-be the maximum over all instances with n men, n women, and strict, complete
-preference lists. This repository studies that question using Lean proofs,
-SAT certificates, and independently checked computations.
+## The problem
+
+In a stable-marriage instance of order n, each of n men and n women ranks
+everyone on the other side in a strict order. A perfect matching is
+**stable** if no man and woman both prefer each other to their assigned
+partners. Gale and Shapley (1962) showed that every instance has at least
+one stable matching; some instances have many. Let **f(n)** be the largest
+number of stable matchings any order-n instance can have.
+
+Knuth asked about the behaviour of f(n) in *Mariages stables* (1976), and
+Gusfield and Irving listed it as Open Problem 1 in *The Stable Marriage
+Problem* (1989). The difficulty is scale: order 6 already has about 10^28
+instances after the obvious symmetries, far beyond direct search.
+
+## What was known before this project
+
+To the best of our knowledge, this was the state of the art before this
+project.
+
+| Question | Prior state | Source |
+|---|---|---|
+| f(1), …, f(4) | 1, 2, 3, 10 | classical; Eilers' uniqueness observation at order 4 |
+| f(5) | 16, found by constraint programming, not formally certified | Eilers (2022), [OEIS A357269](https://oeis.org/A357269) |
+| f(6) | open; best lower bound 48 (a dihedral Latin instance), conjectured exact | [OEIS A357271](https://oeis.org/A357271) |
+| f(7) | lower bound 81 (Thurber's 2002 bound was 71) | Ong, Ang, Ho, Eilers, Marks, Buzi (2024 poster) |
+| Growth rate | 2.28^n ≤ f(n) ≤ 3.55^n | lower: Thurber (2002); first simply exponential upper bound: Karlin, Oveis Gharan, Weber (STOC 2018); 3.55^n: Palmer, Pálvölgyi (FOCS 2021) |
+
+At order 6 the best proven upper bound, 3.55^6 ≈ 2005, was about forty
+times the conjectured value. The [f(7) notes](docs/f7.md) and
+[background](docs/architecture.md#background) record when the literature
+was last checked; the full references are in the
+[manuscripts](papers/README.md).
+
+## What this project establishes
+
+This repository settles orders 5 and 6, improves the order-7 lower bound,
+and proves a smaller general upper bound, using Lean proofs, SAT
+certificates, and independently checked computations.
 
 | Order | Result | Evidence and current limitation |
 |---|---|---|
