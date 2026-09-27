@@ -17,7 +17,7 @@ instances after the obvious symmetries, far beyond direct search.
 ## What was known before this project
 
 To the best of our knowledge, this was the state of the art before this
-project. Corrections and missing references are welcome.
+project.
 
 | Question | Prior state | Source |
 |---|---|---|
