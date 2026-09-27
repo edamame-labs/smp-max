@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 type: software
-title: "smp-max: certified maximum numbers of stable matchings (f(5) = 16, f(6) = 48, f(7) >= 85)"
+title: "smp-max: certified maximum numbers of stable matchings (f(n) < 3.178^n, f(5) = 16, f(6) = 48, f(7) >= 85)"
 authors:
   - family-names: Xu
     given-names: Jiarui
     email: jxucoder@gmail.com
 repository-code: "https://github.com/jxucoder/smp-max"
-version: 1.0.0
-date-released: 2026-09-09
+version: 1.1.0
+date-released: 2026-09-26
 keywords:
   - stable marriage
   - stable matchings
@@ -25,4 +25,7 @@ abstract: >-
   hypothesis is the unsatisfiability of Lean-defined CNF formulas (120 cube
   formulas at order 5; 318,736 cube formulas at order 6), each refuted by a SAT
   solver with the refutation checked by the formally verified LRAT checker
-  cake_lpr. f(7) >= 85 is witnessed by two explicit instances.
+  cake_lpr. f(7) >= 85 is witnessed by two explicit instances. For every
+  n >= 1, f(n) < 3.178^n is an unconditional Lean 4 theorem
+  (SmpMax.General.stableCount_lt_3178_pow) with no external certificate
+  hypothesis.

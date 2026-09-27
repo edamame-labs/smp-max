@@ -726,8 +726,8 @@ def verify_record(cid, r, base_sha=None):
         p.append("missing cnf_sha256")
     if not is_sha256(r.get("lrat_sha256")):
         p.append("missing lrat_sha256")
-    if base_sha and r.get("base_sha256") not in (None, base_sha):
-        p.append("base_sha256 mismatch")
+    if base_sha and r.get("base_sha256") != base_sha:
+        p.append("base_sha256 missing or mismatched")
     if r.get("closed") != closed or r.get("depth") != len(prefix) \
             or r.get("n_units") != len(prefix) + int(closed):
         p.append("prefix/closed/n_units inconsistent with cube id")
@@ -775,6 +775,9 @@ def audit(recs, depth=2, headers=(), expect_dir=None):
                   f"version={h.get('kissat_version')!r}")
     if expect_dir:
         os.makedirs(expect_dir, exist_ok=True)
+    else:
+        print("   note: coverage and record audit only; per-cube cnf_sha256 is not "
+              "recomputed (use --expect-cnf-dir or check_lean_identity.py)")
     roots = root_cubes(depth)
     missing, bad, nver, nexp = [], [], 0, 0
     stack = [cube_id(p, c) for p, c in roots]
