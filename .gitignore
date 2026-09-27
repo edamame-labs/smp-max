@@ -3,6 +3,7 @@ __pycache__/
 .venv/
 build/
 runs/
+tmp/
 lean/.lake/
 cadical-src/
 cake_lpr-src/

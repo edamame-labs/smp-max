@@ -13,6 +13,10 @@ jobs:
         run: python3 tools/check_docs.py
       - name: Check retained artifact hashes
         run: python3 tools/check_artifacts.py
+      - name: Check standalone 3.178 review bundle
+        run: |
+          python3 -m zipfile -e output/packages/smp-max-3.178-lean-review-2026-09-26.zip runs/review-bundle
+          python3 runs/review-bundle/smp-max-3.178-lean-review-2026-09-26/tools/verify.py --sources-only
       - name: Recount saved witnesses
         run: python3 tools/verify_witnesses.py
       - name: Check certificate runner failure handling

@@ -20,3 +20,10 @@ invocation both resolve repository imports without changing directories.
 See [verification](../docs/verification.md) for prerequisites and exact
 success criteria. The direct encoding requires the optional PySAT dependency;
 the other local Python verification tools use the standard library.
+
+The [3.178 bundle builder](build_3178_bundle.py) prepares the completed
+general proof from its recorded source checkpoint and seals a checksummed
+review archive. Its templates are in `packaging/3178/`. `prepare` creates
+the Lean project and source index; add the proof note, source map, and
+verification evidence before using `seal`. Generated `build/`, `.lake/`,
+and `verification-local/` directories are excluded from the payload.

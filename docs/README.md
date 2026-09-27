@@ -12,6 +12,7 @@ Start with the question you want to answer.
 | How do I run or audit a campaign? | [Campaign reference](reference/campaign.md) |
 | How are instances, schedules, and cubes represented? | [Data formats](reference/formats.md) |
 | What work remains? | [Roadmap](roadmap.md) and [completed f(6) proof design](design/f6-faithfulness.md) |
+| Is there a general upper bound for every order? | [Complete 3.178 Lean theorem, proof note, and review package](general-upper-bound.md) |
 | How is publication prepared? | [Publishing](publishing.md) and [OEIS drafts](oeis-draft.md) |
 | Where did an old filename move? | [Path migration map](path-migration.md) |
 | Why were these methods chosen? | [Dated research history](history/README.md) |

@@ -131,6 +131,27 @@ explains the trust boundary; the module map above describes each theorem. By fil
 `f6_upper_of_unsat`, `f6_eq_48_of_unsat` (Six/ExactMaximum). CI also checks that
 `checks/FiveWitness.lean` depends on `[propext]` alone.
 
+### General entropy theorem
+
+The 56 completed general modules prove `stableCount_lt_3178_pow`:
+
+```lean
+theorem stableCount_lt_3178_pow {n : ℕ} (hn : 0 < n) (I : Profile n) :
+    (stableCount I : ℝ) < (1589 / 500 : ℝ) ^ n
+```
+
+Read the [definitions](SmpMax/General/Definitions.lean),
+[final assembly](SmpMax/General/JointEntropyUpperBound.lean), and
+[English proof guide](../docs/general-upper-bound.md). The theorem counts
+the full stable matching family and has no external certificate hypothesis.
+The modules retain the earlier 3.332, 3.331974, 3.2, and 3.18 bounds as well.
+
+[checks/GeneralEntropy.lean](checks/GeneralEntropy.lean) prints all 112
+selected signatures and axiom lists. `check_lean.sh` requires every one
+and rejects dependencies outside `propext`, `Classical.choice`, and
+`Quot.sound`. The final target has 45 local dependency modules; its
+standalone archive includes a verifier for replaying all of them.
+
 ## Exporters
 
 Three executables, declared in `lakefile.toml`, print DIMACS and cube

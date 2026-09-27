@@ -1,0 +1,519 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Use the standard OpenType Latin Modern text fonts with XeLaTeX/Tectonic.
+\renewcommand{\encodingdefault}{TU}
+\renewcommand{\rmdefault}{lmr}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+% Keep large mathematical operator glyphs in the scalable 10-point face.
+\DeclareFontShape{OT1}{cmr}{m}{n}{
+  <-7>cmr6 <7-8>cmr7 <8-9>cmr8 <9->cmr10
+}{}
+
+\hypersetup{
+  pdftitle={Fewer than 3.178 to the n stable matchings},
+  pdfsubject={An English guide to the complete Lean proof},
+  pdfauthor={},
+  pdfkeywords={stable matchings, entropy, Lean, formal verification}
+}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\DeclareMathOperator{\scount}{stableCount}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\code}[1]{\texttt{#1}}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{1em}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+\title{Fewer than \(3.178^n\) stable matchings}
+\author{\normalsize Proof and formal verification note}
+\date{\small 25 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+For every positive integer \(n\), a strict, complete stable-marriage
+instance with \(n\) men and \(n\) women has fewer than
+\((1589/500)^n=3.178^n\) stable matchings. The proof bounds the entropy
+of the stable matching family through a random revelation order.
+Propagation in both directions of each stable-partner list reduces
+the conditional support; a simultaneous-cap remainder supplies an
+additional saving. A finite charging argument accounts for exceptional
+vertices, and rational logarithm certificates establish the final
+constant. This note explains the argument accompanying the complete
+Lean proof. The theorem has no certificate hypothesis or restriction
+on preference patterns.
+\end{abstract}
+
+\section{The theorem}
+\label{sec:theorem}
+
+A profile is \emph{strict and complete} if every participant strictly
+ranks every participant on the other side. A matching is a bijection
+between the two sides. A pair blocks a matching when both participants
+strictly prefer each other to their assigned partners; a matching is
+\emph{stable} if it has no blocking pair. Let \(\cS(I)\) be the family
+of all stable matchings of a profile \(I\), and put
+\[
+  f(n)=\max_I |\cS(I)|,
+\]
+where the maximum ranges over strict, complete profiles with \(n\)
+participants on each side.
+
+\begin{theorem}\label{thm:main}
+For every positive integer \(n\) and every strict, complete profile
+\(I\) with \(n\) men and \(n\) women,
+\begin{equation}\label{eq:main}
+  |\cS(I)| < \left(\frac{1589}{500}\right)^n = 3.178^n.
+\end{equation}
+In particular, \(f(n)<3.178^n\) for all \(n>0\).
+\end{theorem}
+
+The rational base is exact. The result applies to the full stable
+matching family, with no bound on \(n\) and no structural hypothesis
+on rotations or preferences. The condition \(n>0\) is needed for the
+strict inequality: at \(n=0\) there is one empty matching.
+
+The Lean theorem is \code{SmpMax.General.stableCount\_lt\_3178\_pow}.
+Its definitions encode preference rows as permutations of ranks, with
+lower ranks preferred, and count every stable bijection. Appendix~\ref{app:lean}
+gives the exact declaration and verification commands. The complete
+machine proof is the accompanying source; this note makes no optimality
+or priority claim.
+
+\section{Entropy and a common random gap}
+\label{sec:gap}
+
+Assume \(\cS(I)\ne\varnothing\), since otherwise the theorem is
+immediate. Choose a reference matching \(\mu\) uniformly from
+\(\cS(I)\). For a reveal order \(\pi\), expose the men's partners one
+coordinate at a time. Let \(X_m(\mu,\pi)\) be the number of partners
+of \(m\) occurring among stable matchings that agree with \(\mu\) at
+every already exposed coordinate. The reference itself is compatible,
+so \(X_m\ge1\).
+
+\begin{lemma}[Finite revelation inequality]\label{lem:entropy}
+For any independently chosen finite random reveal order,
+\begin{equation}\label{eq:entropy}
+  \log |\cS(I)|
+  \le \E_{\mu,\pi}\!\left[\sum_m \log X_m(\mu,\pi)\right].
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For a fixed order, apply the chain rule for entropy to the uniformly
+chosen matching. Each conditional entropy is at most the logarithm of
+its conditional support size. Sum over the \(n\) coordinates and then
+average over the independently chosen order.
+\end{proof}
+
+The formal development establishes the corresponding finite counting
+inequality, including the empty-family case. Auxiliary labels introduced
+below affect the reveal ranks only; the sum in \eqref{eq:entropy}
+always has exactly \(n\) terms.
+
+\subsection{Padded stable-partner lists}
+
+Fix \(\mu\) and \(m\). Order all stable partners of \(m\) from best
+to worst. Label a partner \(w\) by her reference owner \(\mu^{-1}(w)\).
+The labels are distinct, and the reference partner \(\mu(m)\) has label
+\(m\), the pivot. Stable-pair opposition implies that a previously
+revealed owner on either side bars compatible partners farther beyond
+that owner.
+
+Append 24 auxiliary labels at each end of the list. Choose \(\pi\)
+uniformly from the permutations of the \(n\) real labels together with
+these 48 auxiliary labels. Every man uses the same auxiliary labels
+and the same permutation. Each individual padded list has distinct
+labels; independence between men's costs is unnecessary.
+
+Let \(L\) and \(R\) count consecutive later-revealed positions on the
+two sides of the pivot, stopping at an earlier label or the padded end.
+The common gap has size
+\begin{equation}\label{eq:gap}
+  K=1+L+R.
+\end{equation}
+Every compatible stable partner lies in this gap. Finite permutation
+counts and a telescoping logarithmic sum give the following uniform
+bound, valid independently of the list length.
+
+\begin{lemma}[Finite gap bound]\label{lem:gap}
+For a positive cutoff \(N\), define
+\begin{equation}\label{eq:BN}
+  B_N = \sum_{k=2}^{N} \frac{2}{k+1}\log\frac{k}{k-1}
+        +\frac{1}{2N}+\frac{3}{2(N+1)}.
+\end{equation}
+Then \(\E_\pi[\log K]\le B_N\). At cutoff \(N=512\),
+\begin{equation}\label{eq:gap-certificate}
+  B_{512}<\log\frac{1665987}{500000}=\log 3.331974.
+\end{equation}
+\end{lemma}
+
+The tail estimate is finite, and \eqref{eq:gap-certificate} is proved
+by an exact rational certificate. The argument needs no identification
+of \(B_N\) with an infinite-series limit.
+
+\section{Propagation and directional savings}
+\label{sec:directional}
+
+Fix one direction of each stable-partner list. Let \(g(m)\) be the
+reference owner of the nearest partner in that direction, or \(m\)
+if no such partner exists. Crossing a worse stable partner forces her
+reference owner to become worse off, and that change propagates to the
+owner's nearest worse-partner owner. The corresponding implication
+toward better partners follows from stable-pair opposition in the
+original profile.
+
+Thus crossing a partner owned by \(a\) forces \(g(a)\) to change.
+If \(g(a)\) has already been revealed, compatibility with \(\mu\)
+is contradicted. The crossed partner and every farther partner are
+excluded. Both directions are proved for the original preferences.
+
+Let \(l,r\) be the actual left and right compatible-support caps about
+the reference partner. They satisfy
+\begin{equation}\label{eq:caps}
+  0\le l\le L,\qquad 0\le r\le R,\qquad
+  1\le X_m\le T:=1+l+r.
+\end{equation}
+The compatible support need not fill the interval between its extremes;
+its cardinality is bounded by the interval length. Measure the two
+directional losses against the same gap:
+\begin{equation}\label{eq:losses}
+  D_L=\log K-\log(1+l+R),\qquad
+  D_R=\log K-\log(1+L+r).
+\end{equation}
+Both losses are nonnegative. Write
+\begin{equation}\label{eq:constants}
+  a_j=\log\frac{j+2}{j+1},\qquad
+  \delta=\frac{467}{20000},\qquad
+  \varepsilon=\frac{307}{500000}.
+\end{equation}
+
+\subsection{Short sides and noncycles}
+
+If a side has at most one real stable partner, its cap is at most one.
+Five padded-gap contributions, telescoped before averaging where they
+are nested, yield a directional saving of at least
+\begin{equation}\label{eq:alpha}
+  \alpha=\frac{a_1}{12}+\frac{a_2}{10}+\frac{a_3}{15}
+  \ge 3(\delta+\varepsilon).
+\end{equation}
+If \(g^2(m)\ne m\), the first partner has a propagation witness outside
+the pivot and first neighbor. Three disjoint events, with opposite
+gap lengths 0, 1, and 2, give at least
+\begin{equation}\label{eq:beta}
+  \beta=\frac{a_0}{12}+\frac{a_1}{30}+\frac{a_2}{60}
+  \ge 3(\delta+\varepsilon).
+\end{equation}
+The possible coincidences of that witness with the first three opposite
+labels are treated separately; each gives the same certified lower
+bound or a larger one.
+
+\subsection{Regular second-step events}
+
+Suppose the chosen side has at least two stable partners and
+\(g^2(m)=m\). Let \(b\) own the second partner. In the regular case,
+\(u=g(b)\) differs from the pivot, first neighbor, and second neighbor.
+If \(u\) is revealed before the pivot, the chosen-side cap is at most one.
+
+For \(j=0,\ldots,23\), require \(u\) and opposite label \(j+1\)
+before the pivot, and the first \(j\) opposite labels and first two
+chosen-side labels after it. The opposite gap then has length exactly
+\(j\), the chosen gap has length at least two, and the loss is at
+least \(a_{j+1}\). These events are disjoint for distinct \(j\).
+
+For a witness outside the 24 opposite labels, the probability is
+\begin{equation}\label{eq:outside-row}
+  p_j=\frac{2}{(j+5)(j+4)(j+3)}.
+\end{equation}
+If \(u\) is opposite label \(i+1\), where \(0\le i\le23\), it is
+\begin{equation}\label{eq:collision-rows}
+  p_{ij}=\begin{cases}
+    \dfrac{2}{(j+5)(j+4)(j+3)}, & j<i,\\[6pt]
+    \dfrac{1}{(j+4)(j+3)}, & j=i,\\[6pt]
+    0, & j>i.
+  \end{cases}
+\end{equation}
+Indeed, for \(p\) specified distinct labels before the pivot and \(q\)
+specified distinct labels after it, the exact probability is
+\begin{equation}\label{eq:order-probability}
+  \frac{p!\,q!}{(p+q+1)!}.
+\end{equation}
+This is a relative-order count, with no independence assumption on
+the label events. Designating the outside row by \(i=24\), all 25
+rows satisfy the exact certified inequality
+\begin{equation}\label{eq:row-bound}
+  \sum_{j=0}^{23}p_{ij}a_{j+1}\ge\delta.
+\end{equation}
+
+\section{The simultaneous-cap remainder}
+\label{sec:joint}
+
+The two directional losses leave a further gain when both caps shrink.
+The identity
+\begin{equation}\label{eq:product}
+  (1+l+R)(1+L+r)-KT=(L-l)(R-r)\ge0
+\end{equation}
+gives the nonnegative remainder
+\begin{align}
+  J
+  &:=\log\frac{(1+l+R)(1+L+r)}{KT}\notag\\
+  &=\log\left(1+\frac{(L-l)(R-r)}{KT}\right)\ge0.
+  \label{eq:joint-remainder}
+\end{align}
+Consequently,
+\begin{equation}\label{eq:support-loss}
+  \log X_m\le\log K-D_L-D_R-J.
+\end{equation}
+
+\begin{lemma}[Simultaneous saving]\label{lem:joint}
+If \(L,R\ge2\) and \(l,r\le1\), then \(J\ge\log(16/15)\).
+\end{lemma}
+
+\begin{proof}
+We have \(T\le3\), and
+\(5(L-1)(R-1)\ge1+L+R=K\). Hence
+\[
+  \frac{(L-l)(R-r)}{KT}
+  \ge\frac{(L-1)(R-1)}{3K}\ge\frac1{15}.
+\]
+Apply the monotonicity of the logarithm in \eqref{eq:joint-remainder}.
+The local bound is attained at \(L=R=2\) and \(l=r=1\).
+\end{proof}
+
+For regular second-step witnesses in both directions, require the
+witnesses before the pivot and the four nearest side labels after it.
+Distinct witnesses avoiding these four labels give probability
+\(2!4!/7!=1/105\); coincident witnesses give \(1!4!/6!=1/30\).
+In either case the expected joint saving is at least \(\varepsilon\),
+because
+\begin{equation}\label{eq:epsilon}
+  \frac{1}{105}\log\frac{16}{15}\ge\varepsilon.
+\end{equation}
+
+A witness may instead coincide with one of the first two opposite
+labels. This prevents the simultaneous event but increases its own
+directional saving. The two relevant lower bounds are
+\begin{equation}\label{eq:cross-collision}
+  \frac{a_1}{12}\ge\delta+\varepsilon,
+  \qquad
+  \frac{a_1}{30}+\frac{a_2}{20}\ge\delta+\varepsilon.
+\end{equation}
+The other direction retains its \(\delta\) saving. Thus every regular
+cross-direction witness configuration gives combined saving at least
+\(2\delta+\varepsilon\), including these collisions.
+
+\section{Exceptional vertices and charging}
+\label{sec:charging}
+
+The joint bonus is an aggregate bound, since it cannot be assigned to
+each man separately. For each direction, define the noncycle set
+\[
+  B=\{m:g^2(m)\ne m\}.
+\]
+Let \(D\) contain the exceptional men whose chosen side has at least
+two partners, with \(g^2(m)=m\) and \(g(b)\in\{m,g(m)\}\), where
+\(b\) owns the second partner.
+
+\begin{lemma}[Two-to-one charging]\label{lem:charging}
+For each direction, \(|D|\le2|B|\).
+\end{lemma}
+
+\begin{proof}
+Charge an exceptional man \(m\) to its second-partner owner \(b\).
+The neighbor-owner activity lemma gives \(g(b)\ne b\), and the
+exceptional relations imply \(g^2(b)\ne b\), so \(b\in B\).
+Conversely, a man charging a fixed \(b\) must be either \(g(b)\) or
+\(g^2(b)\). Each fiber therefore has at most two elements.
+\end{proof}
+
+Each directional mean loss is nonnegative, at least \(\delta\) outside
+\(D\), and at least \(3(\delta+\varepsilon)\) on \(B\). Short sides
+use \eqref{eq:alpha}; regular sides use the event rows of
+Section~\ref{sec:directional}. A man regular on both sides has the
+combined gain from Section~\ref{sec:joint}. If either side is short,
+its stronger saving already covers that combined target.
+
+Put \(S_m=\E_\pi[D_L+D_R+J]\). Write \(b_L,b_R\) and \(d_L,d_R\)
+for the indicators, at \(m\), of the two noncycle and exceptional
+sets. The resulting pointwise accounting inequality is
+\begin{equation}\label{eq:accounting}
+  S_m\ge2\delta+\varepsilon
+       +2(\delta+\varepsilon)(b_L+b_R)
+       -(\delta+\varepsilon)(d_L+d_R).
+\end{equation}
+Summing over men and applying Lemma~\ref{lem:charging} separately
+in each direction cancels the possible deficits:
+\begin{equation}\label{eq:total-saving}
+  \sum_m S_m\ge n(2\delta+\varepsilon),
+  \qquad
+  2\delta+\varepsilon=\frac{23657}{500000}=0.047314.
+\end{equation}
+This estimate includes the cost of every exceptional vertex.
+
+\section{Exact constants and the final bound}
+\label{sec:assembly}
+
+Combining the gap estimate, \eqref{eq:support-loss}, and
+\eqref{eq:total-saving} gives, for every stable reference \(\mu\),
+\begin{equation}\label{eq:cost-bound}
+  \E_\pi\!\left[\sum_m\log X_m(\mu,\pi)\right]
+  \le n(B_{512}-2\delta-\varepsilon).
+\end{equation}
+The remaining numerical comparison is exact:
+\begin{equation}\label{eq:final-certificate}
+  B_{512}-2\delta-\varepsilon<\log\frac{1589}{500}.
+\end{equation}
+
+To certify the event bounds and this comparison, the development uses
+finite positive partial sums for the logarithm. For \(0\le x<1\)
+and an integer \(t\ge1\),
+\begin{equation}\label{eq:log-series}
+  \log\frac{1+x}{1-x}
+  =2\sum_{k=0}^{t-1}\frac{x^{2k+1}}{2k+1}+R_t(x),
+  \qquad
+  0\le R_t(x)\le
+  \frac{2x^{2t+1}}{(2t+1)(1-x^2)}.
+\end{equation}
+For \(a_j\), take \(x=1/(2j+3)\); six positive terms give the
+rational floors used in the 25 event rows. For the final comparison,
+take
+\begin{equation}\label{eq:ratio}
+  x=\frac{76987}{3254987},
+  \qquad
+  \frac{1+x}{1-x}
+  =\frac{1665987/500000}{1589/500}.
+\end{equation}
+Four terms and the rational remainder bound certify that the logarithm
+of this ratio is less than \(2\delta+\varepsilon\). Together with
+\eqref{eq:gap-certificate}, this proves \eqref{eq:final-certificate}.
+All comparisons are proved in Lean by exact arithmetic.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The empty stable family is immediate. Otherwise, average
+\eqref{eq:cost-bound} over \(\mu\) and use
+Lemma~\ref{lem:entropy}. Since \(n>0\), the strict inequality
+\eqref{eq:final-certificate} and monotonicity of the exponential give
+\begin{align*}
+  |\cS(I)|
+  &\le\exp\!\bigl(n(B_{512}-2\delta-\varepsilon)\bigr)\\
+  &<\exp\!\left(n\log\frac{1589}{500}\right)\\
+  &=\left(\frac{1589}{500}\right)^n.
+\end{align*}
+Taking the maximum over profiles completes the proof.
+\end{proof}
+
+\appendix
+\section{The Lean statement and verification}
+\label{app:lean}
+
+The exact public declaration in
+\code{JointEntropyUpperBound.lean} is:
+\begin{quote}\small\ttfamily
+theorem stableCount\_lt\_3178\_pow \{n : \(\N\)\}\\
+\hspace*{1em}(hn : 0 < n) (I : Profile n) :\\
+\hspace*{1em}(stableCount I : \(\R\)) < (1589 / 500 : \(\R\)) \textasciicircum\ n
+\end{quote}
+It is in namespace \code{SmpMax.General}. The count is coerced to
+\(\R\); \(1589/500\) is a rational expression in \(\R\), not a
+floating-point approximation. The exact statement check and definition
+printout are in \code{lean/Check3178.lean}.
+
+The final theorem's axiom dependencies are exactly
+\code{propext}, \code{Classical.choice}, and \code{Quot.sound}.
+There is no \code{sorry}, \code{admit}, new axiom, or
+\code{native\_decide} in the packaged general proof sources. Numerical
+validation scripts and external SAT certificates are not assumptions
+of the theorem.
+
+The bundle contains 56 unchanged general proof modules. The target's
+transitive local dependency closure comprises 45 modules; the remaining
+modules retain earlier completed bounds. Lean is pinned to version
+4.33.1, and the exact Mathlib and transitive dependency revisions are
+recorded in \code{lean/lake-manifest.json}.
+
+\begin{samepage}
+From the bundle root, with Python 3.9 or newer and the Lean toolchain
+manager \code{elan} installed, run:
+\begin{quote}\small
+\begin{verbatim}
+python3 tools/verify.py --fetch
+python3 tools/verify.py --kernel all
+\end{verbatim}
+\end{quote}
+\end{samepage}
+The first command obtains the pinned dependencies, builds all 56 source
+modules, checks the exact declaration, audits 112 general statements,
+and independently replays the final module. The second also replays
+all 45 local target-dependency modules. Omit \code{--fetch} when
+dependencies are already present. For a file-identity check without Lean:
+\begin{quote}\small
+\begin{verbatim}
+python3 tools/verify.py --sources-only
+\end{verbatim}
+\end{quote}
+
+The retained verification was performed on 24 September 2026: all 56
+modules rebuilt, all 112 audits passed, and all 45 modules replayed
+successfully. It reused the pinned dependency cache; the download step
+was not repeated. This 25 September edition changes the presentation
+only. The Lean sources, project configuration, verifier, and formal
+verification logs are byte-identical to that checked bundle. The logs
+and command results are in \code{evidence/verification.json} and its
+adjacent files.
+
+\section{Guide to the formal development}
+\label{app:map}
+
+All module names below are relative to \code{lean/SmpMax/General/}
+and have the suffix \code{.lean}. The complete source list and dependency
+order are in \code{SOURCE\_MAP.md} and \code{source-index.json}.
+
+\begin{description}
+  \raggedright
+  \item[Definitions and revelation.]
+  \code{Definitions}, \code{MatchingRevelation}, and
+  \code{ExtendedRevelation} define the full stable family and establish
+  the finite revelation inequality in Section~\ref{sec:gap}.
+
+  \item[Common-gap bound.]
+  \code{PartnerIntervals}, \code{PermutationCounting},
+  \code{LogTail}, and \code{RefinedLogBound} prove the finite gap
+  estimate. \code{RefinedLogCertificate} checks its exact constant;
+  \code{LongPaddedOwners} and \code{LongPaddedSupport} supply the
+  longer padded-list interfaces.
+
+  \item[Propagation and event rows.]
+  \code{SuccessorPropagation}, \code{BidirectionalPropagation},
+  \code{SupportCaps}, and \code{PartnerFrame} connect exclusions to
+  actual compatible supports. \code{LongDirectionalSaving},
+  \code{LongEventRows}, and \code{LongerLogCertificate} establish
+  the directional events and all 25 certified rows.
+
+  \item[Joint savings and charging.]
+  \code{JointGapSaving}, \code{JointGapGeometry}, and
+  \code{JointDirectionalSaving} cover the simultaneous remainder
+  and witness collisions. \code{SuccessorCharging},
+  \code{JointCharging}, and \code{JointMatchingSaving} establish
+  the global saving, including exceptional vertices.
+
+  \item[Exact final comparison.]
+  \code{JointLogCertificate} proves
+  \eqref{eq:final-certificate}; \code{JointEntropyUpperBound}
+  assembles the support estimates and entropy inequality into
+  Theorem~\ref{thm:main}.
+\end{description}
+
+\end{document}

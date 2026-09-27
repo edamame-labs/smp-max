@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-26",
+  "scope": "The selected contribution, containing 56 general modules and 112 general audits; unrelated local research is excluded.",
+  "base_commit": "3899ee354ad02f05df108cefc4d27407384779ef",
+  "formal_steps": [
+    {
+      "step": "lean-check",
+      "command": [
+        "bash",
+        "tools/check_lean.sh"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 29.959,
+      "log": "lean-check.txt"
+    },
+    {
+      "step": "theorem",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "../packaging/3178/Check3178.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.662,
+      "log": "theorem.txt"
+    },
+    {
+      "step": "kernel-final",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "SmpMax.General.JointEntropyUpperBound"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.811,
+      "log": "kernel-final.txt"
+    }
+  ],
+  "general_axiom_audits": 112,
+  "fixed_order_axiom_audits": 26,
+  "differential_cases": 300,
+  "differential_mismatches": 0,
+  "standalone_witness_and_lrat_pilot_passed": true,
+  "selected_tree_unit_tests": 3,
+  "unit_tests_passed": true,
+  "saved_witnesses_checked": 4,
+  "witness_counts": [
+    16,
+    48,
+    85,
+    85
+  ],
+  "proof_build_cache_reused": true,
+  "pinned_dependency_cache_reused": true,
+  "original_all_45_replay_evidence_preserved": true,
+  "all_45_replays_repeated": false,
+  "clean_bundle_rebuild_then_verify_passed": true,
+  "python3 tools/check_docs.py": "Checked 569 local link targets in 43 Markdown documents.",
+  "python3 tools/check_artifacts.py": "Verified SHA-256 of 86 retained artifacts."
+}
